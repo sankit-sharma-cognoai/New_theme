@@ -9,6 +9,9 @@ $("#allincall-popup").click(function() {
 
     resize_chabot_window();
     handleHomePageBanner();
+    fadeIn();
+
+    fadeAway();
 
 
 
@@ -372,7 +375,34 @@ function handleHomePageBanner() {
 
 
 // LANGUAGE JAVASCRIPT
+function fadeIn() {
+    setTimeout(function() {
 
+        $('.easychat-bot-language-div').addClass('easychat-bot-language-div-active', 4000);
+        $(".bot-selected-language-animation-text").show('slow');
+
+    }, 1000);
+}
+
+function fadeAway() {
+    setTimeout(function() {
+
+        $('.easychat-bot-language-div').removeClass('easychat-bot-language-div-active', 1000);
+
+        $(".bot-selected-language-animation-text").hide('slow');
+
+    }, 2000);
+}
+
+function fadeAwayOnItem() {
+    setTimeout(function() {
+
+        $('.easychat-bot-language-div').removeClass('easychat-bot-language-div-active');
+
+        $(".bot-selected-language-animation-text").hide('slow');
+
+    }, 900);
+}
 
 const language_dropdownTrigger = $('.easychat-bot-language-div');
 const language_dropdown = $('#language_dropdown_content');
@@ -405,15 +435,18 @@ $('.language-dropdown-items').on('click', function(event) {
     $('#language_dropdown_content').toggleClass('is-active');
     $('.bot-selected-language-animation-text').text($(event.target).text());
     isDropdownActive();
+    fadeAwayOnItem();
 })
 $('#allincall-chat-box').on('click', function() {
-    $('#language_dropdown_content').removeClass('is-active');
-    isDropdownActive();
-})
-$('#user_input').on('click', function() {
-    $(language_dropdownTrigger).removeClass('easychat-bot-language-div-active');
-    $(".bot-selected-language-animation-text").hide('slow');
-})
+        $('#language_dropdown_content').removeClass('is-active');
+        isDropdownActive();
+        fadeAway();
+    })
+    // $('#user_input').on('click', function() {
+    //     $(language_dropdownTrigger).removeClass('easychat-bot-language-div-active');
+    //     $(".bot-selected-language-animation-text").hide('slow');
+    // })
+
 
 
 

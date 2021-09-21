@@ -938,6 +938,10 @@ body {
     margin-bottom: 12px;
 }
 
+.easychat-bot-feedback-wrapper svg {
+    cursor: pointer;
+}
+
 #easychat-feedback-thumbs-up {
     margin-right: 12px;
 }
@@ -1032,6 +1036,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin-left: 46px;
+    margin-bottom: 8px;
 }
 
 .easychat-quick-recommendation-item {
@@ -1065,6 +1070,94 @@ body {
 
 .easychat-bot-message-status-tick-div {
     margin-left: 4px;
+}
+
+.easychat-intent-feedback-wrapper {
+    padding: 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 28px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    margin-left: 16px;
+    width: 70%;
+}
+
+.easychat-intent-feedback-wrapper .feedback-provide-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.easychat-intent-feedback-wrapper .feedback-empty-warning {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 4px 0px;
+    display: none;
+    color: red;
+}
+
+.radio-btn-container-item input[type="radio"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    background-clip: content-box;
+    border: 2px solid #DADADA;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* appearance for checked radiobutton */
+
+.radio-btn-container-item input[type="radio"]:checked {
+    background-color: #0254D7;
+    border-color: #0254D7;
+}
+
+.radio-btn-container-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio-btn-container-item label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #4D4D4D;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.positive-feedback-options {
+    margin-top: 16px;
+}
+
+.easychat-intent-level-feedback-submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    height: 36px;
+    background: #0254D7;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    float: right;
+    cursor: pointer;
 }
 
 
@@ -1127,7 +1220,7 @@ body {
 }
 
 .easychat-feedback-form-heading-two {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
     line-height: 21px;
     text-align: center;
