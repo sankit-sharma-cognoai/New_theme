@@ -183,10 +183,10 @@ window.onresize = function() {
 function feedbackValueFunc(el) {
 
     if (el.id == 'angry-emoji-div') {
-        document.getElementById('angry-emoji-div').src = '../img/angry-emoji-animate.gif';
-        document.getElementById('sad-emoji-div').src = '../img/sad-emoji.svg';
-        document.getElementById('happy-emoji-div').src = '../img/happy-emoji.svg';
-        document.getElementById('inlove-emoji-div').src = '../img/in-love-emoji.svg';
+        document.getElementById('angry-emoji-div').src = './img/angry-emoji-animate.gif';
+        document.getElementById('sad-emoji-div').src = './img/sad-emoji.svg';
+        document.getElementById('happy-emoji-div').src = './img/happy-emoji.svg';
+        document.getElementById('inlove-emoji-div').src = './img/in-love-emoji.svg';
         document.getElementById('angry-emoji-div').style.width = '60px';
         document.getElementById('angry-emoji-div').style.height = '60px';
         contentvalue = 1
@@ -197,11 +197,11 @@ function feedbackValueFunc(el) {
     }
 
     if (el.id == 'sad-emoji-div') {
-        document.getElementById('sad-emoji-div').src = '../img/sad-emoji-animate.gif';
-        document.getElementById('angry-emoji-div').src = '../img/angry-emoji.svg';
+        document.getElementById('sad-emoji-div').src = './img/sad-emoji-animate.gif';
+        document.getElementById('angry-emoji-div').src = './img/angry-emoji.svg';
 
-        document.getElementById('happy-emoji-div').src = '../img/happy-emoji.svg';
-        document.getElementById('inlove-emoji-div').src = '../img/in-love-emoji.svg';
+        document.getElementById('happy-emoji-div').src = './img/happy-emoji.svg';
+        document.getElementById('inlove-emoji-div').src = './img/in-love-emoji.svg';
         document.getElementById('sad-emoji-div').style.width = '60px';
         document.getElementById('sad-emoji-div').style.height = '60px';
         contentvalue = 2
@@ -211,13 +211,13 @@ function feedbackValueFunc(el) {
     }
 
     if (el.id == 'happy-emoji-div') {
-        document.getElementById('happy-emoji-div').src = '../img/happy-emoji-animate.gif';
+        document.getElementById('happy-emoji-div').src = './img/happy-emoji-animate.gif';
 
-        document.getElementById('angry-emoji-div').src = '../img/angry-emoji.svg';
+        document.getElementById('angry-emoji-div').src = './img/angry-emoji.svg';
 
-        document.getElementById('sad-emoji-div').src = '../img/sad-emoji.svg';
+        document.getElementById('sad-emoji-div').src = './img/sad-emoji.svg';
 
-        document.getElementById('inlove-emoji-div').src = '../img/in-love-emoji.svg';
+        document.getElementById('inlove-emoji-div').src = './img/in-love-emoji.svg';
         document.getElementById('happy-emoji-div').style.width = '60px';
         document.getElementById('happy-emoji-div').style.height = '60px';
         contentvalue = 3
@@ -228,10 +228,10 @@ function feedbackValueFunc(el) {
     }
 
     if (el.id == 'inlove-emoji-div') {
-        document.getElementById('inlove-emoji-div').src = '../img/in-love-emoji-animate.gif';
-        document.getElementById('angry-emoji-div').src = '../img/angry-emoji.svg';
-        document.getElementById('sad-emoji-div').src = '../img/sad-emoji.svg';
-        document.getElementById('happy-emoji-div').src = '../img/happy-emoji.svg';
+        document.getElementById('inlove-emoji-div').src = './img/in-love-emoji-animate.gif';
+        document.getElementById('angry-emoji-div').src = './img/angry-emoji.svg';
+        document.getElementById('sad-emoji-div').src = './img/sad-emoji.svg';
+        document.getElementById('happy-emoji-div').src = './img/happy-emoji.svg';
         document.getElementById('inlove-emoji-div').style.width = '60px';
         document.getElementById('inlove-emoji-div').style.height = '60px';
         contentvalue = 4
