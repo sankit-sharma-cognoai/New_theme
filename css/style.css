@@ -616,6 +616,11 @@ body {
 
 .easychat-bottheme3-navbar.easychat-welcome-home-navbar-div .easychat-bot-company-logo-div {
     width: 157px;
+    padding: 13px 0px;
+}
+
+.easychat-bottheme3-navbar.easychat-welcome-home-navbar-div .easychat-bot-company-logo-div svg {
+    margin-left: -20px;
 }
 
 .easychat-bottheme3-navbar.easychat-welcome-home-navbar-div .easychat-bot-normal-header-div {
