@@ -958,6 +958,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 16px;
+    width: 100%;
 }
 
 .easychat-bot-message-text-div {
