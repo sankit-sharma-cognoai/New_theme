@@ -391,7 +391,7 @@ function fadeAway() {
 
         $(".bot-selected-language-animation-text").hide('slow');
 
-    }, 2000);
+    }, 3000);
 }
 
 function fadeAwayOnItem() {
