@@ -1549,9 +1549,9 @@ body {
     .easychat-bottheme3-navbar {
         padding: 0px 16px;
     }
-    /* .easychat-bot-company-logo-div {
-        width: 75px;
-    } */
+    .easychat-bot-company-logo-div {
+        width: 90px;
+    }
     .easychat-bot-name-div {
         padding: 0px 12px 0px 12px;
     }
