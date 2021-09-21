@@ -295,7 +295,7 @@ function handleHomePageBanner() {
 
         updateDots(currentDot, nextDot);
         moveToSlide(track, currentSlide, nextSlide);
-    }, 3000);
+    }, 5000);
 
     function moveToSlide(track, currentSlide, targetSlide) {
         track.style.transform = "translateX(-" + targetSlide.style.left + ")";
