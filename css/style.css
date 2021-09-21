@@ -1686,3 +1686,9 @@ body {
         opacity: 0 !important;
     }
 }
+
+@supports (-webkit-touch-callout: none) {
+    .easychat-bot-recommendation-wrapper {
+        margin-top: 2.2em;
+    }
+}
