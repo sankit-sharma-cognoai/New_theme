@@ -219,6 +219,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     /* padding: 5px 0px; */
+    scrollbar-width: thin;
 }
 
 .language-dropdown-items::-webkit-scrollbar {
@@ -312,6 +313,7 @@ body {
     line-height: 20px;
     width: 100%;
     padding-right: 2px;
+    scrollbar-width: thin;
 }
 
 .easychat-bot-user-input-div .input-area-wrapper .placeholder-text {
@@ -409,6 +411,7 @@ body {
     overflow-y: hidden;
     height: 100%;
     display: flex;
+    scrollbar-width: none;
 }
 
 .easychat-bot-sticky-intent-items-div::-webkit-scrollbar {
@@ -468,6 +471,7 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0px;
+    scrollbar-width: none;
 }
 
 .easychat-sticky-menu-items::-webkit-scrollbar {
@@ -795,6 +799,7 @@ body {
     padding: 24px;
     position: absolute;
     overflow: hidden;
+    scrollbar-width: thin;
 }
 
 .easychat-bot-welcome-banner-wrapper {
@@ -880,9 +885,14 @@ body {
     flex-wrap: wrap;
     max-height: calc(100vh - 34rem);
     overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .easychat-bot-recommendation-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.easychat-bot-recommendation-wrapper::-moz-scrollbar {
     display: none;
 }
 
@@ -1164,6 +1174,7 @@ body {
     padding: 20px;
     max-height: 62vh;
     overflow-y: auto;
+    scrollbar-width: thin;
 }
 
 .text-area-feedback textarea {
