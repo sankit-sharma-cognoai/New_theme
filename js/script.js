@@ -17,10 +17,7 @@ $("#allincall-popup").click(function() {
 
 });
 
-function scrollTopFunc() {
-    $("#easychat-chat-container").scrollTop($("#easychat-chat-container").height());
 
-}
 $("#easychat-bot-minimize-button").click(function() {
 
     document.getElementById("easychat-bot-minimize-button").style.display = "none";
@@ -72,11 +69,15 @@ $('#user_input').on(type_of_event, function() {
     document.getElementById("easychat-query-send-icon").style.display = "block";
     document.getElementById("easychat-mic-icon").style.display = "none";
     document.getElementById("user_input_placeholder_text").style.visibility = "hidden";
+    document.getElementById("tooltip-mic-send-text").innerHTML = "Send";
+
     if ($('#user_input').text() == "") {
 
         document.getElementById("easychat-query-send-icon").style.display = "none";
         document.getElementById("easychat-mic-icon").style.display = "block";
         document.getElementById("user_input_placeholder_text").style.visibility = "visible";
+        document.getElementById("tooltip-mic-send-text").innerHTML = "Mic";
+
     }
 
     resize_chabot_window();
@@ -93,14 +94,15 @@ $(".easychat-recommendation-item").click(function() {
     $(".easychat-user-message-wrapper").css("display", "flex");
     $(".easychat-bot-quick-recommendation-wrapper").css("display", "inline-block");
     $(".easychat-bottheme3-message-section-area-div").css("padding", "16px");
-    $(".easychat-bot-sticky-intent-wrapper").css("display", "flex");
-    // $(".easychat-bot-sticky-menu-wrapper").css("display", "block");
+    // $(".easychat-bot-sticky-intent-wrapper").css("display", "flex");
+    $(".easychat-bot-sticky-menu-wrapper").css("display", "block");
     $(".easychat-bottheme3-message-section-area-div").css("overflowY", "auto");
     // $(".easychat-bot-end-chat-button-div").css("display", "flex");
     $(".easychat-bot-restart-div svg").css("fill", "#767B87");
 
 
     resize_chabot_window();
+    sticky_arrow_show();
 
 
 });
@@ -159,27 +161,10 @@ function detectIEEdge() {
 function sticky_arrow_show() {
     total_length_of_buttons = 0
     for (var button_iterator = 0; button_iterator < document.getElementsByClassName("button-sticky-item").length; button_iterator++) {
-        total_length_of_buttons += document.getElementsByClassName("button-sticky-item")[button_iterator].offsetWidth
+        total_length_of_buttons += document.getElementsByClassName("button-sticky-item")[button_iterator].offsetWidth;
 
 
     }
-
-
-    // if (detectIEEdge()) {
-    //     // document.getElementById("easychat-bot-sticky-intent-items-div").style.width = 1.15 * (total_length_of_buttons) + "px";
-    //     //document.getElementsByClassName("arrow-button-left")[0].style.display = "none";
-    //     //document.getElementsByClassName("arrow-button-right")[0].style.display = "none";
-
-    //     // var children = document.getElementById('easychat-bot-sticky-intent-items-div').children;
-    //     // var totalWidth = 0;
-
-    //     // for (var i = 0; i < children.length; i++) {
-    //     //     totalWidth += children[i].offsetWidth;
-    //     // }
-    //     // console.log(totalWidth);
-    //     // $("#easychat-bot-sticky-intent-items-div").css("width", totalWidth * 2);
-
-    // }
 
     if (total_length_of_buttons < 0.9 * document.getElementById("easychat-bot-sticky-intent-items-div").offsetWidth) {
 
@@ -496,14 +481,11 @@ $('.language-dropdown-items').on('click', function(event) {
     fadeAwayOnItem();
 })
 $('#allincall-chat-box').on('click', function() {
-        $('#language_dropdown_content').removeClass('is-active');
-        isDropdownActive();
-        fadeAway();
-    })
-    // $('#user_input').on('click', function() {
-    //     $(language_dropdownTrigger).removeClass('easychat-bot-language-div-active');
-    //     $(".bot-selected-language-animation-text").hide('slow');
-    // })
+    $('#language_dropdown_content').removeClass('is-active');
+    isDropdownActive();
+    fadeAway();
+})
+
 
 
 
@@ -520,11 +502,7 @@ $header_dropdownTrigger.on('click', function() {
     $(this).closest('.easychat-bot-header-option-dropdown').find('#bot_header_dropdown_content').toggleClass('is-active');
 });
 $header_dropdownItem.on("click", function() {
-    // for (let i = 1; i <= $language_dropdownItem.length; i++)
-    //     if (i != +$(this).attr("id"))
-    //         document.getElementById(i).classList.remove("selected");
 
-    // document.getElementById($(this).attr("id")).classList.add("selected");
     console.log("click");
 });
 
