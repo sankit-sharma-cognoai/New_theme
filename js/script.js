@@ -1,3 +1,4 @@
+//                BOT ICON ONCLICK FUNCTION
 $("#allincall-popup").click(function() {
 
     document.getElementById("easychat-bot-minimize-button").style.display = "block";
@@ -6,17 +7,13 @@ $("#allincall-popup").click(function() {
     document.getElementById("allincall-chat-box").style.display = "block";
     document.getElementById("allincall-popup").style.display = "none";
     sticky_arrow_show();
-
     resize_chabot_window();
     handleHomePageBanner();
     fadeIn();
-
     fadeAway();
-
-
-
 });
 
+//                BOT MINIMIZED ONCLICK FUNCTION
 
 $("#easychat-bot-minimize-button").click(function() {
 
@@ -27,6 +24,9 @@ $("#easychat-bot-minimize-button").click(function() {
         document.getElementById("allincall-popup").style.display = "block";
     }, 1000);
 });
+
+//                BOT MINIMIZED ON MOBILE ONCLICK FUNCTION
+
 $("#easychat-bot-minimize-button-mobile").click(function() {
 
     document.getElementById("easychat-bot-minimize-button").style.display = "none";
@@ -38,6 +38,9 @@ $("#easychat-bot-minimize-button-mobile").click(function() {
     }, 1000);
 });
 
+//                BOT CLOSE ONCLICK FUNCTION
+
+
 $("#easychat-bot-close-icon").click(function() {
 
     document.getElementById("easychat-bot-minimize-button").style.display = "none";
@@ -47,6 +50,10 @@ $("#easychat-bot-close-icon").click(function() {
         document.getElementById("allincall-popup").style.display = "block";
     }, 1000);
 });
+
+//                BOT CLOSE ON MOBILE ONCLICK FUNCTION
+
+
 $("#easychat-bot-close-icon-mobile").click(function() {
 
     document.getElementById("easychat-bot-minimize-button").style.display = "none";
@@ -56,6 +63,9 @@ $("#easychat-bot-close-icon-mobile").click(function() {
         document.getElementById("allincall-popup").style.display = "block";
     }, 1000);
 });
+
+
+//                BOT INPUTFIELD TYPE FUNCTION
 
 var type_of_event = "";
 
@@ -85,6 +95,8 @@ $('#user_input').on(type_of_event, function() {
 });
 
 
+//                BOT WLCOME RECOMENDATION CHIP ONCLICK FUNCTION
+
 $(".easychat-recommendation-item").click(function() {
     $(".easychat-bot-recommendation-wrapper").css("display", "none");
     $(".easychat-bot-welcome-banner-wrapper").css("display", "none");
@@ -94,12 +106,11 @@ $(".easychat-recommendation-item").click(function() {
     $(".easychat-user-message-wrapper").css("display", "flex");
     $(".easychat-bot-quick-recommendation-wrapper").css("display", "inline-block");
     $(".easychat-bottheme3-message-section-area-div").css("padding", "16px");
-    // $(".easychat-bot-sticky-intent-wrapper").css("display", "flex");
-    $(".easychat-bot-sticky-menu-wrapper").css("display", "block");
+    $(".easychat-bot-sticky-intent-wrapper").css("display", "flex");
+    // $(".easychat-bot-sticky-menu-wrapper").css("display", "block");
     $(".easychat-bottheme3-message-section-area-div").css("overflowY", "auto");
     // $(".easychat-bot-end-chat-button-div").css("display", "flex");
     $(".easychat-bot-restart-div svg").css("fill", "#767B87");
-
 
     resize_chabot_window();
     sticky_arrow_show();
@@ -107,31 +118,32 @@ $(".easychat-recommendation-item").click(function() {
 
 });
 
+//                BOT SHOW STICKY BUTTON FUNCTION
 
 $("#myBtnsticty").click(function() {
 
     $(".easychat-bot-sticky-intent-wrapper").css("display", "flex");
     $(".easychat-bot-sticky-menu-wrapper").css("display", "none");
-
-
-
     resize_chabot_window();
-
 
 });
 
+//                BOT  ONCLICK SCROLL STICKY BUTTON FUNCTION
 
 
 function sticky_scroll_forward() {
-    document.getElementById("easychat-bot-sticky-intent-items-div").scrollBy(200, 0);
-    console.log("scroll left")
+
+    document.getElementById('easychat-bot-sticky-intent-items-div').scrollLeft += 200;
 }
 
 function sticky_scroll_backward() {
-    document.getElementById("easychat-bot-sticky-intent-items-div").scrollBy(-200, 0);
-    console.log("scroll right")
+
+    document.getElementById('easychat-bot-sticky-intent-items-div').scrollLeft -= 200;
 
 }
+
+//                BOT  IE DETECT  FUNCTION
+
 
 function detectIEEdge() {
     var ua = window.navigator.userAgent;
@@ -156,14 +168,13 @@ function detectIEEdge() {
 }
 
 
+//                BOT   STICKY BUTTON ARROW HIDE FUNCTION
 
 
 function sticky_arrow_show() {
     total_length_of_buttons = 0
     for (var button_iterator = 0; button_iterator < document.getElementsByClassName("button-sticky-item").length; button_iterator++) {
         total_length_of_buttons += document.getElementsByClassName("button-sticky-item")[button_iterator].offsetWidth;
-
-
     }
 
     if (total_length_of_buttons < 0.9 * document.getElementById("easychat-bot-sticky-intent-items-div").offsetWidth) {
@@ -172,11 +183,12 @@ function sticky_arrow_show() {
         $(".sticky-intent-arrow-button-left").css("display", "none");
         $(".easychat-bot-sticky-intent-items-div").css("width", "100%");
 
-
     }
 
 
 }
+
+//                BOT  SHOW STICKY MENU FUNCTION
 
 
 function display_sticky_menu_items() {
@@ -197,6 +209,8 @@ function display_sticky_menu_items() {
 
 }
 
+//                BOT  MESSAGE CONTAINER RESIZE FUNCTION FUNCTION
+
 function resize_chabot_window() {
     document.getElementById('easychat-chat-container').style.height = (document.getElementById('allincall-chat-box').clientHeight - (64 + document.getElementById("easychat-footer").clientHeight)).toString() + "px ";
 
@@ -211,6 +225,7 @@ window.onresize = function() {
 
 }
 
+//                BOT  FEEDBACK EMOJI ANIMATION FUNCTION
 
 function feedbackValueFunc(el) {
 
@@ -273,6 +288,7 @@ function feedbackValueFunc(el) {
     }
 }
 
+//                BOT  WELCOME BANNER FUNCTION
 
 
 function handleHomePageBanner() {
@@ -411,7 +427,8 @@ function handleHomePageBanner() {
 
 
 
-// LANGUAGE JAVASCRIPT
+//                BOT  LANGUAGE FUNCTION
+
 function fadeIn() {
     setTimeout(function() {
 
@@ -439,10 +456,7 @@ function fadeAwayOnItem() {
     setTimeout(function() {
 
         $('.easychat-bot-language-div').removeClass('easychat-bot-language-div-active');
-
         $(".bot-selected-language-animation-text").hide('slow');
-        // $(".easychat-bot-language-div.easychat-bot-language-div-active").css("pointerEvents", "auto");
-
 
     }, 900);
 }
@@ -491,7 +505,8 @@ $('#allincall-chat-box').on('click', function() {
 
 
 
-// header dropdown js
+//                BOT  HEADER DROPDOWN FUNCTION
+
 var $header_dropdownOrigin = $('.bot-header-menu-icon');
 var $header_dropdownTrigger = $('.bot-header-menu-icon');
 var $header_dropdown = $('#bot_header_dropdown_content');
@@ -508,7 +523,7 @@ $header_dropdownItem.on("click", function() {
 
 $('html').click(function() {
     $header_dropdown.removeClass('is-active');
-    // fadeAwayOnItem();
+
 });
 
 $header_dropdownOrigin.click(function(e) {

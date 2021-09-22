@@ -1638,6 +1638,9 @@ body {
         word-break: inherit;
         padding: 6px;
     }
+    #tooltip-close-text {
+        left: -20px;
+    }
     .easychat-bot-language-div-active {
         position: absolute;
         right: 10px;
