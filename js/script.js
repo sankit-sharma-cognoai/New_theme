@@ -380,6 +380,8 @@ function fadeIn() {
 
         $('.easychat-bot-language-div').addClass('easychat-bot-language-div-active', 4000);
         $(".bot-selected-language-animation-text").show('slow');
+        $(".easychat-bot-language-div.easychat-bot-language-div-active").css("pointerEvents", "none");
+
 
     }, 1000);
 }
@@ -390,6 +392,8 @@ function fadeAway() {
         $('.easychat-bot-language-div').removeClass('easychat-bot-language-div-active', 1000);
 
         $(".bot-selected-language-animation-text").hide('slow');
+        $(".easychat-bot-language-div").css("pointerEvents", "auto");
+
 
     }, 3000);
 }
@@ -400,6 +404,8 @@ function fadeAwayOnItem() {
         $('.easychat-bot-language-div').removeClass('easychat-bot-language-div-active');
 
         $(".bot-selected-language-animation-text").hide('slow');
+        // $(".easychat-bot-language-div.easychat-bot-language-div-active").css("pointerEvents", "auto");
+
 
     }, 900);
 }
