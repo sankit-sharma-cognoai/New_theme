@@ -646,7 +646,7 @@ body {
 }
 
 .easychat-bot-company-logo-div {
-    /* width: 130px; */
+    width: 130px;
     height: 56px;
     display: flex;
     padding: 8px 0px;
@@ -1174,13 +1174,13 @@ body {
 
 .easychat-bot-custom-modal {
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 101;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -1696,5 +1696,57 @@ body {
 @supports (-webkit-touch-callout: none) {
     .easychat-bot-recommendation-wrapper {
         margin-top: 2.2em;
+    }
+}
+
+
+/* css for IE  */
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    #tooltip-home-text,
+    #tooltip-language-text,
+    #tooltip-mic-send-text {
+        width: 100%;
+        padding: 6px;
+        top: auto;
+        bottom: 125%;
+        height: auto;
+        white-space: nowrap;
+    }
+    #tooltip-language-text {
+        width: 145px;
+    }
+    #tooltip-speak-text,
+    #tooltip-close-text {
+        left: -15px;
+        word-break: inherit;
+        padding: 6px;
+    }
+    .easychat-bot-language-div-active {
+        position: absolute;
+        right: 10px;
+        top: 6px;
+    }
+    .easychat-bottheme3-footer-input-container {
+        position: relative;
+    }
+    .feedback-submit-btn {
+        margin-bottom: 15px;
+    }
+    .easychat-bot-user-input-div .input-area-wrapper .input-area {
+        padding-top: 8px;
+    }
+    .easychat-bot-sticky-intent-items-div button {
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    .easychat-bot-sticky-intent-items-div {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .easychat-bot-recommendation-wrapper {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
 }
