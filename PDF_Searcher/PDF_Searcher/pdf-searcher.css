@@ -1,0 +1,417 @@
+#pdf-searcher-table .card-header {
+    padding: 18px 24px !important;
+}
+
+#pdf-searcher-table .card-body {
+    padding: 24px !important;
+}
+
+#pdf-searcher-table .container-fluid {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.3rem;
+}
+
+#pdf-searcher-table table {
+    border: 1px solid #E2E8F0;
+}
+
+#pdf-searcher-table table thead th {
+    background: #EEF0FF !important;
+    color: #334155 !important;
+}
+
+#pdf-searcher-table .card-header {
+    border-radius: 10px 10px 0 0 !important;
+    border: none !important;
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f9f9ff !important;
+}
+
+#pdf-searcher-table .row {
+    margin-top: 14px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+#pdf-searcher-table .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+#edit_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#pdf-searcher-table .font-weight-bold {
+    font-weight: 500 !important;
+}
+
+#pdf-searcher-table .text-primary {
+    font-family: "Silka", sans-serif !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #2D2D2D !important;
+}
+
+#pdf-searcher-table .custom-btn-row {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    margin-bottom: 8px!important;
+}
+
+#pdf-searcher-table .custom-btn-row .custom-filter-container {
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+#pdf-searcher-table .custom-btn-row .btn {
+    border-radius: 5.6px!important;
+    font-family: Silka;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    outline: none!important;
+}
+
+#pdf-searcher-table .custom_filter_btn {
+    background-color: #FFFFFF !important;
+    border: 1px solid #EBEBEB !important;
+    color: #4D4D4D !important;
+}
+
+#pdf-searcher-table .custom-btn-row .create_campaign_btn {
+    width: 160.25px;
+    height: 35px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    color: #fff!important;
+}
+
+#pdf-searcher-table table tbody td {
+    padding: 1rem 20px !important;
+    color: #4D4D4D;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#pdf-search-bar::-webkit-input-placeholder {
+    color: #909090;
+    font-family: Silka;
+    font-size: 14px;
+    background: url("./img/search.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:before {
+    display: none;
+}
+
+table.dataTable thead .sorting:after {
+    content: url(./img/sort.svg);
+    right: unset;
+}
+
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
+    right: unset;
+}
+
+#pdf-searcher-table .status-active {
+    color: #047857;
+}
+
+#pdf-searcher-table .inactive {
+    color: #FF0000;
+}
+
+#pdf-searcher-table .indexing {
+    color: #2F80ED;
+}
+
+#pdf-searcher-table .not-indexed {
+    color: #F9600A;
+}
+
+#pdf-searcher-table .action-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#pdf-searcher-table .action-icons svg {
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+#pdf-searcher-table .pagination li {
+    line-height: 1;
+}
+
+#pdf-searcher-table .pagination li.active {
+    background: #0254D7;
+    border-radius: 0;
+    border-top: 0.5px solid #0254D7;
+    border-bottom: 0.5px solid #0254D7;
+}
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .35rem;
+    border: 0.5px solid #CBD5E1;
+    height: 36px;
+}
+
+.page-item {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center;
+    border-right: 0.5px solid #CBD5E1;
+}
+
+.page-link {
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    font-family: "Silka", sans-serif;
+    font-size: 12px !important;
+    line-height: 14px !important;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    color: #7B7A7B !important;
+}
+
+.page-item.disabled .page-link {
+    color: #858796;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dddfeb;
+}
+
+.pagination .active a {
+    color: #FFFFFF !important;
+}
+
+.disable-button {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.indexing-active svg {
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(359deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+#delete-confirmation-modal {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 32px !important;
+    position: fixed !important;
+    box-sizing: border-box;
+    min-height: 14em;
+    height: auto;
+    overflow: hidden;
+    width: 20%;
+}
+
+.termination-confirmation-modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.termination-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.termination-confirmation-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Silka", sans-serif;
+    text-align: center;
+    color: #2D2D2D;
+    padding: 20px;
+}
+
+.termination-buttons {
+    padding: 0 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.termination-buttons button {
+    width: 132.5px;
+    height: 36px;
+    border-radius: 24px;
+    padding: 7px 16px;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.termination-no-btn {
+    background: #FFFFFF !important;
+    border: 1px solid #CBCACA !important;
+    color: #4D4D4D !important;
+}
+
+.termination-yes-btn {
+    background: #0254D7;
+    border: 1px solid #0254D7;
+    color: #FFFFFF;
+}
+
+
+/*************** Filter result css ***************************/
+
+.filter-items-container {
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    padding: 24px 24px 3px 24px;
+}
+
+.filter-result-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+
+.filter-result-item:last-child {
+    margin-bottom: 0px;
+}
+
+.filter-name-text {
+    margin: 0px 30px 0px 0px !important;
+    text-transform: capitalize;
+    min-width: 80px !important;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #7B7A7B;
+    display: flex;
+    align-items: center;
+}
+
+.chip-area {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.5em;
+}
+
+.filter-remove-icon.filter-show-on-mobile {
+    display: none;
+    position: relative;
+}
+
+.filter-chip {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    height: 30px;
+    padding: 2px 16px 2px 16px;
+    margin-right: 8px;
+    /* cursor: pointer; */
+    box-shadow: none !important;
+    white-space: nowrap;
+    background: #FAFAFA;
+    border: 1px solid #0254D7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0254D7;
+}
+
+.filter-chip span {
+    max-width: 12em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.filter-chip-remove-icon {
+    background: transparent;
+    margin: 4px -4px 0px 4px !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0px !important;
+    box-shadow: none !important;
+}
+
+.filter-items-container button:focus {
+    background-color: transparent !important;
+}
+
+.filter-remove-icon {
+    border: none !important;
+    outline: none !important;
+    padding: 0px !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    height: 26px;
+    margin: 3px 0px 0px 2px !important;
+}
+
+.clear-all-filter-btn {
+    border: none !important;
+    outline: none !important;
+    padding: 0px !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    text-align: center !important;
+    color: #0254D7 !important;
+    background: transparent !important;
+    margin: 0px 0px 24px 0px !important;
+}
+
+.filtered-result-text-heading {
+    margin: 16px 0px -14px 0px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #7B7A7B;
+}

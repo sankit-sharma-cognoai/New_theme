@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+
+
+<html lang="en" style="overflow-x: hidden;">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noimageindex" />
+    <meta name="googlebot" content="noindex,nofollow" />
+    <meta name="googlebot-news" content="noindex,nofollow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Cogno ChatBot</title>
+
+    <link rel="shortcut icon" type="image/png" href="https://static.allincall.in/static/EasyChatApp/img/favicon.svg" />
+    <link href="https://static.allincall.in/static/EasyChatApp/css/select2.min.css" rel="stylesheet" />
+
+
+
+
+    <link href="https://static.allincall.in/static/EasyChatApp/css/material_icons.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+    <link href="https://static.allincall.in/static/EasyChatApp/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+
+
+    <link href="https://easychat-dev.allincall.in/static/EasyChatApp/css/style3.css?v=6.99" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://easychat-dev.allincall.in/static/EasyChatApp/css/Treant.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="https://static.allincall.in/static/EasyChatApp/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://static.allincall.in/static/EasyChatApp/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+
+    <link href="https://easychat-dev.allincall.in/static/EasyChatApp/css/changes.css?v=3.95" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="https://static.allincall.in/static/EasyChatApp/css/cropper.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://static.allincall.in/static/EasyChatApp/css/jquery-ui.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <script type="text/javascript" src="https://static.allincall.in/static/EasyChatApp/js/jquery-3.3.1.min.js"></script>
+
+    <!-- <link href="/static/EasyChatApp/css/cropper.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/static/EasyChatApp/css/jquery-ui.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <script type="text/javascript" src="/static/EasyChatApp/js/jquery-3.3.1.min.js"></script> -->
+
+    <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/Chart.min.js"></script>
+    <!-- <script type="text/javascript" src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script> -->
+    <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/ckeditor/ckeditor.js"></script>
+
+
+    <!-- <script type="text/javascript" src="https://static.allincall.in/static/EasyChatApp/ckeditor/ckeditor.js"></script> -->
+    <script type="text/javascript" src="https://static.allincall.in/static/EasyChatApp/js/jstree.min.js"></script>
+    <script type="text/javascript" src="https://static.allincall.in/static/EasyChatApp/js/jscolor.js"></script>
+    <script type="text/javascript" src="https://static.allincall.in/static/EasyChatApp/js/select2.min.js"></script>
+
+
+    <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/materialize.js"></script>
+
+    <script type="text/javascript" src="https://static.allincall.in/static/EasyChatApp/js/cropper.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="https://easychat-dev.allincall.in/static/EasyChatApp/css/base.css?v=50.88">
+
+    <link rel="stylesheet" type="text/css" href="https://easychat-dev.allincall.in/static/EasyChatApp/css/hamburger.css?v=44.63">
+
+    <style>
+        @font-face {
+            font-family: "Silka";
+            src: url('Silka/Silka-Medium.woff');
+            font-weight: 500;
+            font-style: normal;
+        }
+        
+        .btn {
+            font-family: "Silka", sans-serif !important;
+            font-weight: 500 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="./filter_modal.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap_datatable_min.css">
+</head>
+
+<body class="grey lighten-4 easychat-body">
+    <input type='hidden' name='csrfmiddlewaretoken' value='tQ2sfWPuOMqyWr8moNybovh8jL7zR4fxtru8HNNmbgVf1vc66GdgkIfKDqtZCpbI' />
+    <div class="col s12 easychat-build-bot-toast-div" id="easychat-build-bot-toast-div" style="display: none;">
+        <div class="build-bot-message">
+            To merge your recent changes click here ...
+        </div>
+        <a href="javascript:void(0)" class="build-bot-button" onclick="build_bot(this)" id="build-bot-toast-btn">Build Bot </a>
+
+        <a href="javascript:void(0)" class="build-bot-cross-button" onclick="build_bot(this)" id="build-bot-cancel-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.2 3.80664C12.0754 3.6818 11.9063 3.61165 11.73 3.61165C11.5536 3.61165 11.3845 3.6818 11.26 3.80664L7.99998 7.05997L4.73998 3.79997C4.61543 3.67514 4.44633 3.60498 4.26998 3.60498C4.09364 3.60498 3.92453 3.67514 3.79998 3.79997C3.53998 4.05997 3.53998 4.47997 3.79998 4.73997L7.05998 7.99997L3.79998 11.26C3.53998 11.52 3.53998 11.94 3.79998 12.2C4.05998 12.46 4.47998 12.46 4.73998 12.2L7.99998 8.93997L11.26 12.2C11.52 12.46 11.94 12.46 12.2 12.2C12.46 11.94 12.46 11.52 12.2 11.26L8.93998 7.99997L12.2 4.73997C12.4533 4.48664 12.4533 4.05997 12.2 3.80664Z" fill="black"></path>
+      </svg>
+        </a>
+
+    </div>
+    <div class="navbar-fixed">
+
+        <nav class="white-new lighten-1" role="navigation">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo red-text">
+
+                    <div class="row" style="background-color: #ffffff;">
+
+                        <div data-html2canvas-ignore class="col center-align purple darken-3" style="width: 4.16%; display: flex; justify-content: center; align-items: center; height: 100%;">
+                            <br>
+
+                            <a href="/chat/home/" class="white-text tooltipped" data-position="right" data-tooltip="Home">
+                                <i class="material-icons" id="home-button">home</i>
+                            </a>
+
+                        </div>
+
+                        <div class="col s6" style="height: 64px;">
+                            <div class="row" id="show-global-search" style="display: none;">
+                                <div class="input-field col s10">
+                                    <i class="material-icons prefix">search</i>
+                                    <input id="global_search" type="text" class="validate" autocomplete="on">
+                                    <label for="global_search"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li>
+                                <a href="/chat/logout/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                  </svg> Logout
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="col s5 " id="easychat-user-profile-section">
+                            <a class="dropdown-trigger" href="javascript:void(0)" data-target="dropdown1">
+                                <span class="easychat-profile-username">
+                  sayak.china@allincall.in
+                </span>
+
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 36C27.9412 36 36 27.9412 36 18C36 8.05884 27.9412 0 18 0C8.05884 0 0 8.05884 0 18C0 27.9412 8.05884 36 18 36ZM26 22.2468C26 21.0044 24.9932 19.9973 23.7511 19.9973H12.2489C11.0068 19.9973 10 21.0044 10 22.2468V23.1667C10 23.739 10.1785 24.2969 10.5104 24.7629C12.0526 26.9277 14.5757 28 17.9967 28C21.4171 28 23.9414 26.9282 25.4874 24.7644C25.8208 24.2979 26 23.7388 26 23.1653V22.2468ZM22.9968 13.001C22.9968 10.239 20.7582 8 17.9967 8C15.2352 8 12.9966 10.239 12.9966 13.001C12.9966 15.7627 15.2352 18.0017 17.9967 18.0017C20.7582 18.0017 22.9968 15.7627 22.9968 13.001Z" fill="url(#paint0_linear)"/>
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#2755cb"/>
+                    <stop offset="1" stop-color="#2755cb"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+
+
+    </div>
+
+
+    <div class="row">
+        <div class="col s-half" style="position: fixed;">
+            <div class="row">
+                <div data-html2canvas-ignore class="col s12 center-align" style="height: 100vh; background-color: #3A3F51; padding-top: 10px;">
+
+                    <a href="/chat/bots/" class="tooltipped grey-text" data-position="right" data-tooltip="Build bot" id="build-chatbot-button">
+                        <i class="material-icons">android</i>
+                    </a>
+                    <br><br>
+
+
+
+                    <a href="/chat/extract-faqs/" class="tooltipped grey-text" data-position="right" data-tooltip="Extract FAQs">
+                        <i class="material-icons">cloud_download</i>
+                    </a>
+                    <br><br>
+
+
+                    <a href="/chat/audit-trail/" class="tooltipped grey-text" data-position="right" data-tooltip="Audit Trail">
+                        <i class="material-icons">border_color</i>
+                    </a>
+                    <br><br>
+
+
+
+
+
+                    <a href="/chat/supervisor/" class="tooltipped grey-text" data-position="right" data-tooltip="Access Management">
+                        <i class="material-icons">supervisor_account</i>
+                    </a>
+                    <br><br>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col s-eleven-half offset-s-half">
+
+
+
+
+
+            <link rel="stylesheet" type="text/css" href="https://easychat-dev.allincall.in/static/EasyChatApp/css/theme2_embed.css?v=19.48">
+
+
+            <link rel="stylesheet" type="text/css" href="https://easychat-dev.allincall.in/static/EasyChatApp/css/console.css?v={% random_int 1 100 %">
+
+            <div class="row">
+                <div class="col s2" id="main-console-sidenav" style="padding-top:0.5em;">
+
+                    <div class="collection with-header" id="buildchatbot-sidenav" style="border-radius:0.5em;">
+                        <li class="collection-header grey-text">Test</li>
+
+
+                        <!--                 <a class="grey-text text-darken-2 collection-item" href="/chat/bot/edit/299" id="create-quick-chatbot">Configurations</a> -->
+                        <div class="iconsFlex">
+
+                            <a class="grey-text text-darken-2 collection-item" href="/chat/bot/edit/299/?selected_language=en" id="create-quick-chatbot">
+                                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.8335 8.99984C6.85811 8.99984 7.7166 9.71105 7.94224 10.6667L14.1668 10.6665C14.443 10.6665 14.6668 10.8904 14.6668 11.1665C14.6668 11.4196 14.4787 11.6288 14.2347 11.6619L14.1668 11.6665L7.94208 11.6669C7.7162 12.6223 6.85787 13.3332 5.8335 13.3332C4.80913 13.3332 3.95079 12.6223 3.72491 11.6669L1.8335 11.6665C1.55735 11.6665 1.3335 11.4426 1.3335 11.1665C1.3335 10.9134 1.5216 10.7042 1.76565 10.6711L1.8335 10.6665L3.72475 10.6667C3.95039 9.71105 4.80889 8.99984 5.8335 8.99984ZM10.1668 2.6665C11.1914 2.6665 12.0499 3.37772 12.2756 4.3334L14.1668 4.33317C14.443 4.33317 14.6668 4.55703 14.6668 4.83317C14.6668 5.0863 14.4787 5.2955 14.2347 5.32861L14.1668 5.33317L12.2754 5.33361C12.0495 6.28896 11.1912 6.99984 10.1668 6.99984C9.14246 6.99984 8.28413 6.28896 8.05824 5.33361L1.8335 5.33317C1.55735 5.33317 1.3335 5.10931 1.3335 4.83317C1.3335 4.58004 1.5216 4.37084 1.76565 4.33773L1.8335 4.33317L8.05809 4.3334C8.28372 3.37772 9.14222 2.6665 10.1668 2.6665Z" fill="#7B7B7B"/>
+                        </svg>
+                                <span class="easychat-sidenavbar-content">
+                        
+                      Configurations</span></a>
+
+                        </div>
+
+
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/intent/?bot_pk=299&selected_language=en" id="modify-existing-intent"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.99984 1.3335C4.31794 1.3335 1.33317 4.31826 1.33317 8.00016C1.33317 11.6821 4.31794 14.6668 7.99984 14.6668C9.09346 14.6668 10.1497 14.4028 11.096 13.9057L13.9562 14.6504C14.2591 14.7293 14.5686 14.5477 14.6475 14.2448C14.6718 14.1512 14.6718 14.0529 14.6475 13.9593L13.9032 11.1003C14.4017 10.1531 14.6665 9.09535 14.6665 8.00016C14.6665 4.31826 11.6817 1.3335 7.99984 1.3335ZM7.16537 8.66683H10.1665L10.2344 8.67139C10.4784 8.7045 10.6665 8.9137 10.6665 9.16683C10.6665 9.41996 10.4784 9.62916 10.2344 9.66226L10.1665 9.66683H7.16537L7.09752 9.66226C6.85347 9.62916 6.66537 9.41996 6.66537 9.16683C6.66537 8.9137 6.85347 8.7045 7.09752 8.67139L7.16537 8.66683ZM5.83317 6.3335H10.1665L10.2344 6.33806C10.4784 6.37117 10.6665 6.58036 10.6665 6.8335C10.6665 7.08663 10.4784 7.29582 10.2344 7.32893L10.1665 7.33349H5.83317L5.76532 7.32893C5.52127 7.29582 5.33317 7.08663 5.33317 6.8335C5.33317 6.58036 5.52127 6.37117 5.76532 6.33806L5.83317 6.3335Z" fill="#7B7B7B"/>
+                        </svg>
+                        <span class ="easychat-sidenavbar-content"> Manage Intents</span></a>
+
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/create-quick-bot/?bot_pk=299" id="create-quick-chatbot">Create bot with Excel</a> -->
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/create-quick-bot/?bot_pk=299" id="create-quick-chatbot"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.35 1H3.65C2.7398 1 2 1.71925 2 2.60417V13.3958C2 14.2808 2.7398 15 3.65 15H12.35C13.2602 15 14 14.2808 14 13.3958V2.60417C14 1.71925 13.2602 1 12.35 1ZM6.2 13.25H4.25C4.0016 13.25 3.8 13.054 3.8 12.8125V11.3542H6.2V13.25ZM6.2 10.4792H3.8V8.4375H6.2V10.4792ZM6.2 7.5625H3.8V6.10417C3.8 5.86267 4.0016 5.66667 4.25 5.66667H6.2V7.5625ZM12.2 12.8125C12.2 13.054 11.9984 13.25 11.75 13.25H7.1V11.3542H12.2V12.8125ZM12.2 10.4792H7.1V8.4375H12.2V10.4792ZM12.2 7.5625H7.1V5.66667H11.75C11.9984 5.66667 12.2 5.86267 12.2 6.10417V7.5625Z" fill="#7B7B7B"/>
+                        </svg>
+                  
+                        <span class ="easychat-sidenavbar-content">Create bot with Excel</span></a>
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/word-mappers/?bot_pk=299" id="word-mappers">Word Mappers</a> -->
+
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/word-mappers/?bot_pk=299" id="word-mappers">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0001 5.0575L9.5727 2.63411C7.83855 0.89996 5.02694 0.89996 3.2928 2.63411C1.55865 4.36825 1.55865 7.17986 3.2928 8.914L8.85178 14.472C9.11217 14.7323 9.53424 14.7322 9.79459 14.4718C10.0549 14.2115 10.0548 13.7893 9.79443 13.529L4.23561 7.9712C3.02216 6.75775 3.02216 4.79036 4.23561 3.57692C5.41113 2.40139 7.29422 2.36465 8.51425 3.467L8.63021 3.57723L11.0567 5.9995L8.00008 5.99985C7.65819 5.99985 7.37641 6.25721 7.3379 6.58877L7.33342 6.66652C7.33342 7.00841 7.59078 7.29019 7.92234 7.3287L8.00008 7.33319H12.6668C13.0086 7.33319 13.2904 7.07583 13.3289 6.74427L13.3334 6.66652V2.00173C13.3334 1.63354 13.0349 1.33506 12.6668 1.33506C12.3249 1.33506 12.0431 1.59242 12.0046 1.92398L12.0001 2.00173V5.0575L9.5727 2.63411L12.0001 5.0575Z" fill="#7B7B7B"/>
+                        </svg>
+
+
+
+                            <span class="easychat-sidenavbar-content">Word Mappers</span></a>
+
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/categories/?bot_pk=299" id="categories">Categories</a> -->
+
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/categories/?bot_pk=299" id="categories"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.83333 8.66667C6.66176 8.66667 7.33333 9.33824 7.33333 10.1667V12.5C7.33333 13.3284 6.66176 14 5.83333 14H3.5C2.67157 14 2 13.3284 2 12.5V10.1667C2 9.33824 2.67157 8.66667 3.5 8.66667H5.83333ZM12.5 8.66667C13.3284 8.66667 14 9.33824 14 10.1667V12.5C14 13.3284 13.3284 14 12.5 14H10.1667C9.33824 14 8.66667 13.3284 8.66667 12.5V10.1667C8.66667 9.33824 9.33824 8.66667 10.1667 8.66667H12.5ZM5.83333 2C6.66176 2 7.33333 2.67157 7.33333 3.5V5.83333C7.33333 6.66176 6.66176 7.33333 5.83333 7.33333H3.5C2.67157 7.33333 2 6.66176 2 5.83333V3.5C2 2.67157 2.67157 2 3.5 2H5.83333ZM12.5 2C13.3284 2 14 2.67157 14 3.5V5.83333C14 6.66176 13.3284 7.33333 12.5 7.33333H10.1667C9.33824 7.33333 8.66667 6.66176 8.66667 5.83333V3.5C8.66667 2.67157 9.33824 2 10.1667 2H12.5Z" fill="#7B7B7B"/>
+                        </svg>
+                        
+                        <span class ="easychat-sidenavbar-content">Categories</span></a>
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/test-chatbot/?bot_pk=299" id="test-chatbot">Automated Testing</a> 
+                                    -->
+
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/test-chatbot/?bot_pk=299" id="test-chatbot"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.99042 10.6936C6.2227 10.9021 6.26544 11.2562 6.10106 11.5168L6.05564 11.5798L4.25565 13.7804C4.06565 14.0127 3.74687 14.0655 3.49996 13.9158L3.43985 13.8741L2.23985 12.9306C1.97483 12.7222 1.92125 12.3282 2.12017 12.0506C2.30379 11.7943 2.63838 11.7268 2.89722 11.8818L2.96022 11.9252L3.71003 12.5147L5.14441 10.7619C5.36002 10.4983 5.73879 10.4677 5.99042 10.6936ZM13.4 11.7994C13.7314 11.7994 14 12.0808 14 12.4279C14 12.7502 13.7684 13.0159 13.47 13.0522L13.4 13.0564H7.40002C7.06865 13.0564 6.80002 12.775 6.80002 12.4279C6.80002 12.1056 7.03164 11.8399 7.33005 11.8036L7.40002 11.7994H13.4ZM13.3925 8.02823C13.7239 8.02823 13.9925 8.30963 13.9925 8.65675C13.9925 8.97909 13.7609 9.24475 13.4625 9.28105L13.3925 9.28528H7.39257C7.0612 9.28528 6.79257 9.00388 6.79257 8.65675C6.79257 8.33442 7.02419 8.06876 7.32259 8.03246L7.39257 8.02823H13.3925ZM5.99042 3.15126C6.2227 3.35974 6.26544 3.71387 6.10106 3.97444L6.05564 4.0375L4.25565 6.23809C4.06565 6.47037 3.74687 6.52318 3.49996 6.37347L3.43985 6.33181L2.23985 5.38827C1.97483 5.17989 1.92125 4.78591 2.12017 4.50828C2.30379 4.25202 2.63838 4.18448 2.89722 4.3395L2.96022 4.38291L3.71003 4.97233L5.14441 3.21958C5.36002 2.95598 5.73879 2.92539 5.99042 3.15126ZM13.4 4.25707C13.7314 4.25707 14 4.53847 14 4.88559C14 5.20792 13.7684 5.47358 13.47 5.50989L13.4 5.51412H7.40002C7.06865 5.51412 6.80002 5.23272 6.80002 4.88559C6.80002 4.56326 7.03164 4.2976 7.33005 4.26129L7.40002 4.25707H13.4Z" fill="#7B7B7B"/>
+                        </svg>
+                        
+                        <span class ="easychat-sidenavbar-content">Automated Testing</span></a>
+
+                        <!-- Commenting NLP BENCHMARK as instructed -->
+                        <!-- 
+                <a class="grey-text text-darken-2 collection-item" href="/chat/nlp-benchmark/?bot_pk=299"
+                id="test-chatbot"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.5119 11.1945L13.4755 14.0851C13.6752 14.6842 13.4199 15.3406 12.868 15.6474C11.8392 16.2192 10.5482 16.5 9 16.5C7.45181 16.5 6.16082 16.2192 5.13202 15.6474C4.58007 15.3406 4.32483 14.6842 4.52453 14.0851L5.48815 11.1945C6.46374 11.9353 7.68053 12.375 9 12.375C10.3195 12.375 11.5363 11.9353 12.5119 11.1945ZM9 1.5C10.0024 1.5 10.9368 1.79136 11.7231 2.29401C11.6611 2.52902 11.5668 2.70207 11.4469 2.82192C11.2575 3.01131 10.9353 3.13703 10.4535 3.17523L10.2869 3.18469L10.003 3.19189C8.37599 3.31101 8.41667 5.8125 10.125 5.8125C10.7927 5.8125 11.2174 5.94851 11.4469 6.17808C11.6363 6.36747 11.762 6.68968 11.8002 7.17155L11.8097 7.33812L11.8169 7.62202C11.8891 8.60763 12.8355 8.98124 13.5705 8.74286C12.7558 10.4472 11.0155 11.625 9 11.625C6.20406 11.625 3.9375 9.35844 3.9375 6.5625C3.9375 3.76656 6.20406 1.5 9 1.5ZM13.6875 1.5C13.6875 2.36221 13.8899 2.9694 14.2727 3.35225C14.6261 3.70565 15.1707 3.90529 15.9305 3.93392L16.125 3.9375C16.8438 3.9375 16.8737 4.9707 16.2148 5.0568L16.125 5.0625C15.2628 5.0625 14.6556 5.2649 14.2727 5.64775C13.9193 6.00115 13.7197 6.54571 13.6911 7.30554L13.6875 7.5C13.6875 8.25 12.5625 8.25 12.5625 7.5C12.5625 6.63779 12.3601 6.0306 11.9773 5.64775C11.6239 5.29435 11.0793 5.09471 10.3195 5.06608L10.125 5.0625C9.40625 5.0625 9.3763 4.0293 10.0352 3.9432L10.125 3.9375C10.9872 3.9375 11.5944 3.7351 11.9773 3.35225C12.3601 2.9694 12.5625 2.36221 12.5625 1.5C12.5625 0.75 13.6875 0.75 13.6875 1.5Z"
+                    fill="#7B7B7B" />
+                </svg>
+
+
+
+                &nbsp;NLP Benchmark</a>
+               -->
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/message-history/?bot_id=299" id="bot-learning">Message History</a> -->
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/user-filtered/?bot_id=299" id="bot-learning">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 3C11.5376 3 14 5.46243 14 8.5C14 11.5376 11.5376 14 8.5 14C7.45539 14 6.45238 13.7077 5.58538 13.165C5.23227 12.944 4.90521 12.6834 4.61068 12.3889C4.31571 12.0938 4.05486 11.7662 3.83366 11.4125C3.29181 10.5459 3 9.54373 3 8.5C3 8.33254 3.0075 8.16591 3.02242 8.00045C3.05273 7.66431 3.34979 7.41638 3.68594 7.44669C4.02208 7.47699 4.27001 7.77406 4.2397 8.11021C4.22808 8.23918 4.22222 8.36919 4.22222 8.5C4.22222 9.31289 4.44874 10.0908 4.86995 10.7645C5.04211 11.0398 5.24523 11.2949 5.47498 11.5247C5.70437 11.7541 5.95905 11.957 6.23387 12.129C6.90785 12.5509 7.68643 12.7778 8.5 12.7778C10.8626 12.7778 12.7778 10.8626 12.7778 8.5C12.7778 6.13745 10.8626 4.22222 8.5 4.22222C7.35639 4.22222 6.29038 4.67408 5.5043 5.44569L6.35971 5.44653C6.69722 5.44653 6.97082 5.72013 6.97082 6.05764C6.97082 6.37104 6.73491 6.62934 6.43098 6.66464L6.35971 6.66875H3.91441C3.60101 6.66875 3.34271 6.43284 3.30741 6.12891L3.3033 6.05764V3.61326C3.3033 3.27575 3.5769 3.00215 3.91441 3.00215C4.22781 3.00215 4.48611 3.23806 4.52141 3.54199L4.52552 3.61326L4.52526 4.69795C5.54595 3.63041 6.96952 3 8.5 3ZM8.04167 5.44444C8.27358 5.44444 8.46545 5.61698 8.49581 5.84061L8.5 5.90278V8.5H9.875C10.128 8.5 10.3333 8.70533 10.3333 8.95833C10.3333 9.19025 10.1608 9.38211 9.93717 9.41248L9.875 9.41667H8.04167C7.80975 9.41667 7.61789 9.24413 7.58752 9.0205L7.58333 8.95833V5.90278C7.58333 5.64978 7.78867 5.44444 8.04167 5.44444Z" fill="#7B7B7B"/>
+                        </svg>
+                            <span class="easychat-sidenavbar-content">Message History</span></a>
+
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/revised-analytics/?bot_id=299" id="bot-learning">Analytics</a>           -->
+
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/revised-analytics/?bot_id=299" id="bot-learning"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.6249 3C13.3844 3 14 3.61553 14 4.37483V12.6252C14 13.3845 13.3844 14 12.6249 14H4.37509C3.61565 14 3 13.3845 3 12.6252V4.37483C3 3.61553 3.61565 3 4.37509 3H12.6249ZM7.16301 6.02421L6.21164 8.19405H5.29182C5.03867 8.19405 4.83345 8.39923 4.83345 8.65233C4.83345 8.90543 5.03867 9.11061 5.29182 9.11061H6.51118C6.69317 9.11061 6.85792 9.00296 6.93098 8.83632L7.56369 7.39325L8.99157 10.9584C9.13851 11.3253 9.64996 11.3466 9.82694 10.9932L10.7697 9.11061H11.7089C11.962 9.11061 12.1673 8.90543 12.1673 8.65233C12.1673 8.39923 11.962 8.19405 11.7089 8.19405H10.4866C10.3131 8.19405 10.1545 8.29202 10.0768 8.44715L9.46364 9.67147L8.00832 6.03784C7.85722 5.66058 7.32619 5.65202 7.16301 6.02421Z" fill="#7B7B7B"/>
+                      </svg>
+                      <span class ="easychat-sidenavbar-content">Analytics</span></a>
+
+
+
+
+
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/conversion-analytics/?bot_id=299" id="bot-learning"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5716 6.8704C17.5394 6.83837 17.4957 6.8207 17.4503 6.82141C17.4062 6.82316 17.3646 6.84196 17.3341 6.87383L15.238 9.13686C14.6574 9.76106 13.7651 9.98751 12.9572 9.71572L10.4763 8.88254C10.3124 8.82809 10.1321 8.86139 9.99843 8.97078L6.55939 11.8229C6.20481 12.1168 5.67913 12.0676 5.38525 11.713C5.09137 11.3585 5.14057 10.8328 5.49515 10.5389L8.9342 7.6854C9.51102 7.20435 10.2968 7.05862 11.0078 7.30083L13.4886 8.13401C13.6743 8.19629 13.8793 8.14467 14.0133 8.00186L16.1629 5.68225C16.224 5.61678 16.2221 5.51469 16.1588 5.45143L15.4793 4.7687C15.3839 4.67306 15.3556 4.52932 15.4077 4.40465C15.4597 4.27999 15.5818 4.19901 15.7169 4.19958L18.3852 4.20602C18.5694 4.20647 18.7184 4.35616 18.7179 4.54037L18.7115 7.2087C18.7111 7.34367 18.6295 7.46513 18.5046 7.51639C18.4642 7.5332 18.4209 7.54172 18.3771 7.54143C18.2886 7.54138 18.2038 7.50614 18.1412 7.44347L17.5716 6.8704ZM16.7043 9.53834C16.7048 9.35413 16.8545 9.20516 17.0387 9.20561L19.0399 9.21044C19.2241 9.21089 19.3731 9.36058 19.3727 9.54479L19.3529 17.7165C19.353 17.7608 19.3354 17.8033 19.304 17.8345C19.2726 17.8658 19.23 17.8832 19.1858 17.8829L16.851 17.8773C16.8067 17.8773 16.7642 17.8597 16.733 17.8283C16.7017 17.7969 16.6843 17.7544 16.6846 17.7101L16.7043 9.53834ZM8.69154 12.8546C8.69198 12.6704 8.84167 12.5214 9.02588 12.5218L11.0271 12.5267C11.2113 12.5271 11.3603 12.6768 11.3599 12.861L11.3482 17.6974C11.3483 17.7416 11.3306 17.7841 11.2992 17.8154C11.2679 17.8466 11.2253 17.864 11.181 17.8637L8.84622 17.8581C8.80194 17.8582 8.75946 17.8405 8.72822 17.8092C8.69698 17.7778 8.67957 17.7352 8.67986 17.6909L8.69154 12.8546ZM7.17843 17.8541L4.84364 17.8485C4.79936 17.8485 4.75688 17.8309 4.72564 17.7995C4.6944 17.7681 4.67699 17.7256 4.67728 17.6813L4.6809 16.1804C4.68135 15.9962 4.83104 15.8472 5.01525 15.8476L7.01649 15.8525C7.2007 15.8529 7.34967 16.0026 7.34923 16.1868L7.3456 17.6877C7.34567 17.732 7.32806 17.7745 7.29667 17.8057C7.26528 17.837 7.22271 17.8544 7.17843 17.8541ZM13.0251 13.8659C12.8409 13.8654 12.6912 14.0144 12.6908 14.1986L12.6823 17.7008C12.6821 17.7451 12.6995 17.7876 12.7307 17.819C12.7619 17.8504 12.8044 17.868 12.8487 17.868L15.1835 17.8736C15.2278 17.8739 15.2703 17.8565 15.3017 17.8252C15.3331 17.794 15.3507 17.7515 15.3507 17.7072L15.3591 14.205C15.3596 14.0208 15.2106 13.8711 15.0264 13.8707L13.0251 13.8659ZM4.67207 19.8493L19.3479 19.8848C19.7163 19.8856 20.0157 19.5877 20.0166 19.2193C20.0174 18.8509 19.7195 18.5515 19.3511 18.5506L4.67529 18.5151C4.30687 18.5143 4.00749 18.8122 4.0066 19.1806C4.00571 19.549 4.30365 19.8484 4.67207 19.8493Z" fill="#7B7B7B"/>
+                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="17" height="16">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5716 6.8704C17.5394 6.83837 17.4957 6.8207 17.4503 6.82141C17.4062 6.82316 17.3646 6.84196 17.3341 6.87383L15.238 9.13686C14.6574 9.76106 13.7651 9.98751 12.9572 9.71572L10.4763 8.88254C10.3124 8.82809 10.1321 8.86139 9.99843 8.97078L6.55939 11.8229C6.20481 12.1168 5.67913 12.0676 5.38525 11.713C5.09137 11.3585 5.14057 10.8328 5.49515 10.5389L8.9342 7.6854C9.51102 7.20435 10.2968 7.05862 11.0078 7.30083L13.4886 8.13401C13.6743 8.19629 13.8793 8.14467 14.0133 8.00186L16.1629 5.68225C16.224 5.61678 16.2221 5.51469 16.1588 5.45143L15.4793 4.7687C15.3839 4.67306 15.3556 4.52932 15.4077 4.40465C15.4597 4.27999 15.5818 4.19901 15.7169 4.19958L18.3852 4.20602C18.5694 4.20647 18.7184 4.35616 18.7179 4.54037L18.7115 7.2087C18.7111 7.34367 18.6295 7.46513 18.5046 7.51639C18.4642 7.5332 18.4209 7.54172 18.3771 7.54143C18.2886 7.54138 18.2038 7.50614 18.1412 7.44347L17.5716 6.8704ZM16.7043 9.53834C16.7048 9.35413 16.8545 9.20516 17.0387 9.20561L19.0399 9.21044C19.2241 9.21089 19.3731 9.36058 19.3727 9.54479L19.3529 17.7165C19.353 17.7608 19.3354 17.8033 19.304 17.8345C19.2726 17.8658 19.23 17.8832 19.1858 17.8829L16.851 17.8773C16.8067 17.8773 16.7642 17.8597 16.733 17.8283C16.7017 17.7969 16.6843 17.7544 16.6846 17.7101L16.7043 9.53834ZM8.69154 12.8546C8.69198 12.6704 8.84167 12.5214 9.02588 12.5218L11.0271 12.5267C11.2113 12.5271 11.3603 12.6768 11.3599 12.861L11.3482 17.6974C11.3483 17.7416 11.3306 17.7841 11.2992 17.8154C11.2679 17.8466 11.2253 17.864 11.181 17.8637L8.84622 17.8581C8.80194 17.8582 8.75946 17.8405 8.72822 17.8092C8.69698 17.7778 8.67957 17.7352 8.67986 17.6909L8.69154 12.8546ZM7.17843 17.8541L4.84364 17.8485C4.79936 17.8485 4.75688 17.8309 4.72564 17.7995C4.6944 17.7681 4.67699 17.7256 4.67728 17.6813L4.6809 16.1804C4.68135 15.9962 4.83104 15.8472 5.01525 15.8476L7.01649 15.8525C7.2007 15.8529 7.34967 16.0026 7.34923 16.1868L7.3456 17.6877C7.34567 17.732 7.32806 17.7745 7.29667 17.8057C7.26528 17.837 7.22271 17.8544 7.17843 17.8541ZM13.0251 13.8659C12.8409 13.8654 12.6912 14.0144 12.6908 14.1986L12.6823 17.7008C12.6821 17.7451 12.6995 17.7876 12.7307 17.819C12.7619 17.8504 12.8044 17.868 12.8487 17.868L15.1835 17.8736C15.2278 17.8739 15.2703 17.8565 15.3017 17.8252C15.3331 17.794 15.3507 17.7515 15.3507 17.7072L15.3591 14.205C15.3596 14.0208 15.2106 13.8711 15.0264 13.8707L13.0251 13.8659ZM4.67207 19.8493L19.3479 19.8848C19.7163 19.8856 20.0157 19.5877 20.0166 19.2193C20.0174 18.8509 19.7195 18.5515 19.3511 18.5506L4.67529 18.5151C4.30687 18.5143 4.00749 18.8122 4.0066 19.1806C4.00571 19.549 4.30365 19.8484 4.67207 19.8493Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                            </g>
+                            </svg>
+                        <span class ="easychat-sidenavbar-content">Conversion Analytics</span></a>
+
+
+
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/bot-learning/?bot_pk=299" id="bot-learning">Self Learning</a> -->
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/bot-learning/?bot_pk=299" id="bot-learning"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.1144 9.93055C13.1364 9.56406 14.6699 7.79453 14.6699 5.66685C14.6699 3.27361 12.7298 1.33351 10.3365 1.33351C9.34799 1.33351 8.41412 1.66704 7.66466 2.2547L7.66425 1.83351C7.66425 1.58038 7.47615 1.37119 7.2321 1.33808L7.16425 1.33351C6.91112 1.33351 6.70192 1.52162 6.66881 1.76567L6.66425 1.83351V3.49926C6.66425 3.75239 6.85235 3.96158 7.0964 3.99469L7.16425 3.99926H8.83398C9.11012 3.99926 9.33398 3.7754 9.33398 3.49926C9.33398 3.24613 9.14588 3.03693 8.90183 3.00382L8.83398 2.99926L8.33789 2.99853C8.90447 2.57339 9.60042 2.33351 10.3365 2.33351C12.1775 2.33351 13.6699 3.8259 13.6699 5.66685C13.6699 7.18052 12.6609 8.45854 11.2789 8.86511L11.1144 9.93055ZM9.65759 13.9976C10.5781 13.9976 11.3243 13.2514 11.3243 12.3309C11.3243 11.6407 10.9047 11.0484 10.3067 10.7953L10.8521 7.25223C11.5202 7.0351 12.0032 6.40737 12.0032 5.66685C12.0032 4.74637 11.257 4.00018 10.3365 4.00018C9.79155 4.00018 9.30766 4.26175 9.00356 4.6662H4.33313C4.02903 4.26175 3.54514 4.00018 3.00016 4.00018C2.07969 4.00018 1.3335 4.74637 1.3335 5.66685C1.3335 6.40615 1.81486 7.03303 2.48127 7.25116L3.02585 10.7919C2.42353 11.0431 2.00016 11.6376 2.00016 12.3309C2.00016 13.2514 2.74635 13.9976 3.66683 13.9976C4.2109 13.9976 4.69408 13.7369 4.99827 13.3336H8.32615C8.63034 13.7369 9.11353 13.9976 9.65759 13.9976ZM7.99093 12.3336H5.3335C5.3335 11.533 4.7728 10.866 4.02392 10.7026L3.49391 7.25916C4.13558 7.06042 4.61142 6.48448 4.66231 5.79049L4.66683 5.66685H8.66986C8.66986 6.41371 9.16112 7.04584 9.83813 7.25772L9.3092 10.7007C8.59184 10.8533 8.04517 11.4673 7.99473 12.2174L7.99093 12.3336Z" fill="#7B7B7B"/>
+                        </svg>
+                        <span class ="easychat-sidenavbar-content">Self Learning</span></a>
+
+
+                        <!-- <a href="/chat/easychat-api-analytics/?bot_pk=299" class=" grey-text text-darken-2 collection-item">API Analytics</a> -->
+                        <a href="/chat/easychat-api-analytics/?bot_pk=299   " class="grey-text text-darken-2 collection-item"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.00016 1.3335H4.00016C3.26378 1.3335 2.66683 1.93045 2.66683 2.66683V8.00017L3.06788 8.00017L3.93075 6.03178C4.31921 5.14561 5.52367 5.10632 5.99761 5.89562L6.01671 5.92744L6.07353 6.04451L7.22522 8.92059L7.45586 8.58113C7.63309 8.27567 7.93817 8.0687 8.28322 8.01433L8.31872 8.00874L8.4415 8.00012H9.79817C10.4425 8.00012 10.9648 8.52246 10.9648 9.16679C10.9648 9.75165 10.535 10.2353 9.97325 10.3203L9.93904 10.3255L9.82057 10.3335H9.12699L8.0173 12.0685C7.57512 12.8607 6.44985 12.8533 5.9996 12.0977L5.98102 12.0665L5.92572 11.9522L4.95061 9.51706L4.89881 9.63524C4.74867 9.97773 4.44657 10.2221 4.0922 10.3037C4.06858 10.3092 4.04465 10.3139 4.02054 10.3179L3.98343 10.324L3.85479 10.3335L2.66683 10.3335V13.3335C2.66683 14.0699 3.26378 14.6668 4.00016 14.6668H12.0002C12.7365 14.6668 13.3335 14.0699 13.3335 13.3335V6.66683H9.3335C8.59799 6.66683 8.00158 6.0713 8.00016 5.33613L8.00016 1.3335Z" fill="#7B7B7B"/>
+                    <path d="M9.3335 5.66683C9.1494 5.66683 9.00016 5.51759 9.00016 5.3335V1.66683L13.0002 5.66683H9.3335Z" fill="#7B7B7B"/>
+                    <path d="M3.50355 8.66684L1.8335 8.66683L1.76495 8.67145L1.75811 8.67248C1.51762 8.70886 1.3335 8.91643 1.3335 9.16684C1.3335 9.44298 1.55735 9.66683 1.8335 9.66683L3.8303 9.66684L3.90446 9.66138L3.91189 9.66015C3.9222 9.65845 3.93243 9.65643 3.94256 9.65409C4.09448 9.6191 4.22392 9.51429 4.28823 9.36758L4.97841 7.79312L6.536 11.6828L6.56857 11.7502L6.57228 11.7564C6.76676 12.0828 7.25944 12.0802 7.44291 11.7293L8.76201 9.66678H9.79817L9.86672 9.66217L9.87356 9.66114C10.114 9.62476 10.2982 9.41719 10.2982 9.16678C10.2982 8.89064 10.0743 8.66678 9.79817 8.66678H8.46489L8.39408 8.67176L8.38698 8.67287C8.23306 8.69713 8.09766 8.79233 8.02338 8.93211L7.07226 10.332L5.46343 6.3143L5.42988 6.24517L5.42607 6.23881C5.22383 5.90201 4.70712 5.92121 4.54133 6.29943L3.50355 8.66684Z" fill="#7B7B7B"/>
+                    </svg>
+                    <span class ="easychat-sidenavbar-content">API Analytics</span></a>
+
+
+
+                        <!-- <a href="/chat/easychat-api-analytics/?bot_pk=299" class=" grey-text text-darken-2 collection-item">API Analytics</a> -->
+                        <a href="/campaign/dashboard/?bot_pk=299" target="_blank" class="grey-text text-darken-2 collection-item">
+                            <svg style="margin-left: 3px;" width="18" height="18" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.755 7.80907C16.755 8.37358 17.2168 8.83544 17.7813 8.83544H19.8341C20.3986 8.83544 20.8604 8.37358 20.8604 7.80907C20.8604 7.24457 20.3986 6.7827 19.8341 6.7827H17.7813C17.2168 6.7827 16.755 7.24457 16.755 7.80907ZM15.3078 12.7562C15.2272 12.8613 15.1685 12.9815 15.1351 13.1097C15.1018 13.2379 15.0945 13.3715 15.1136 13.5026C15.1327 13.6337 15.1779 13.7596 15.2465 13.8729C15.3151 13.9862 15.4058 14.0846 15.513 14.1623C16.057 14.5626 16.6318 14.9937 17.1758 15.4042C17.6274 15.7429 18.2637 15.6506 18.5922 15.1989C18.5922 15.1887 18.6024 15.1887 18.6024 15.1784C18.683 15.0723 18.7417 14.9513 18.775 14.8223C18.8083 14.6934 18.8156 14.559 18.7965 14.4272C18.7774 14.2954 18.7323 14.1687 18.6637 14.0545C18.5951 13.9403 18.5045 13.8409 18.3971 13.762C17.8532 13.3515 17.2784 12.9204 16.7447 12.5201C16.6369 12.4405 16.5145 12.3828 16.3844 12.3506C16.2543 12.3183 16.1192 12.312 15.9867 12.332C15.8541 12.352 15.7269 12.398 15.6121 12.4672C15.4974 12.5365 15.3975 12.6277 15.318 12.7357C15.318 12.7459 15.3078 12.7562 15.3078 12.7562ZM18.6127 0.429461C18.6127 0.419197 18.6024 0.419197 18.6024 0.408933C18.5234 0.301781 18.4239 0.211378 18.3097 0.142966C18.1955 0.074554 18.0689 0.0294944 17.9371 0.0103998C17.8054 -0.00869482 17.6711 -0.00144437 17.5422 0.0317303C17.4133 0.064905 17.2922 0.123344 17.186 0.203659C16.6421 0.614208 16.057 1.04528 15.5233 1.45583C15.0717 1.79453 14.9896 2.43089 15.3283 2.87223C15.3283 2.88249 15.3386 2.88249 15.3386 2.89275C15.6773 3.34436 16.3033 3.43673 16.755 3.09803C17.2989 2.69774 17.8737 2.2564 18.4177 1.84585C18.859 1.51741 18.9411 0.881064 18.6127 0.429461ZM6.49124 4.72996H2.38575C1.25674 4.72996 0.333008 5.65369 0.333008 6.7827V8.83544C0.333008 9.96445 1.25674 10.8882 2.38575 10.8882H3.41212V13.9673C3.41212 14.5318 3.87399 14.9937 4.43849 14.9937C5.003 14.9937 5.46487 14.5318 5.46487 13.9673V10.8882H6.49124L11.6231 13.9673V1.65084L6.49124 4.72996ZM14.189 7.80907C14.189 6.444 13.5937 5.21235 12.6495 4.37073V11.2372C13.5937 10.4058 14.189 9.17415 14.189 7.80907Z" fill="#7B7B7B" fill-opacity="1"></path>
+                </svg>
+                            <span class="easychat-sidenavbar-content">Campaign</span></a>
+
+
+
+                        <a href="./pdf-searcher.html" class="grey-text text-darken-2 collection-item">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8125 15.125V16.2515C11.8125 16.8739 11.3095 17.375 10.689 17.375H2.24855C1.62615 17.375 1.125 16.8695 1.125 16.2459V3.31662C1.125 2.69282 1.63083 2.1875 2.2548 2.1875H7.875V5.56357C7.875 6.18873 8.38017 6.6875 9.00333 6.6875H11.8125V7.8125H6.75385C5.81974 7.8125 5.0625 8.56752 5.0625 9.49932V13.4382C5.0625 14.3698 5.814 15.125 6.75385 15.125H11.8125ZM8.4375 2.1875V5.56085C8.4375 5.87242 8.69117 6.125 8.99481 6.125H11.8125L8.4375 2.1875ZM6.74694 8.375C6.12731 8.375 5.625 8.88135 5.625 9.49551V13.442C5.625 14.0608 6.13257 14.5625 6.74694 14.5625H16.3156C16.9352 14.5625 17.4375 14.0562 17.4375 13.442V9.49551C17.4375 8.87667 16.9299 8.375 16.3156 8.375H6.74694ZM14.0625 11.1875V10.0625H16.3125V9.5H13.5V13.4375H14.0625V11.75H15.75V11.1875H14.0625ZM6.75 10.625V13.4375H7.3125V11.75H8.43475C9.05759 11.75 9.5625 11.2507 9.5625 10.625C9.5625 10.0037 9.05968 9.5 8.43475 9.5H6.75V10.625ZM7.3125 10.0625V11.1875H8.43809C8.74842 11.1875 9 10.9378 9 10.625C9 10.3143 8.751 10.0625 8.43809 10.0625H7.3125ZM10.125 9.5V13.4375H11.8098C12.4326 13.4375 12.9375 12.9388 12.9375 12.3092V10.6283C12.9375 10.0052 12.4347 9.5 11.8098 9.5H10.125ZM10.6875 10.0625V12.875H11.8131C12.1234 12.875 12.375 12.6254 12.375 12.3126V10.6249C12.375 10.3143 12.126 10.0625 11.8131 10.0625H10.6875Z" fill="#7B7B7B"/>
+                </svg>
+                            <span class="easychat-sidenavbar-content">PDF Searcher</span></a>
+
+
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/message-history/?bot_id=299" id="bot-learning">Message History</a> -->
+                        <a class="grey-text text-darken-2 collection-item" href="/chat/form-widget-reports/?bot_id=299" id="bot-learning">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 3C11.5376 3 14 5.46243 14 8.5C14 11.5376 11.5376 14 8.5 14C7.45539 14 6.45238 13.7077 5.58538 13.165C5.23227 12.944 4.90521 12.6834 4.61068 12.3889C4.31571 12.0938 4.05486 11.7662 3.83366 11.4125C3.29181 10.5459 3 9.54373 3 8.5C3 8.33254 3.0075 8.16591 3.02242 8.00045C3.05273 7.66431 3.34979 7.41638 3.68594 7.44669C4.02208 7.47699 4.27001 7.77406 4.2397 8.11021C4.22808 8.23918 4.22222 8.36919 4.22222 8.5C4.22222 9.31289 4.44874 10.0908 4.86995 10.7645C5.04211 11.0398 5.24523 11.2949 5.47498 11.5247C5.70437 11.7541 5.95905 11.957 6.23387 12.129C6.90785 12.5509 7.68643 12.7778 8.5 12.7778C10.8626 12.7778 12.7778 10.8626 12.7778 8.5C12.7778 6.13745 10.8626 4.22222 8.5 4.22222C7.35639 4.22222 6.29038 4.67408 5.5043 5.44569L6.35971 5.44653C6.69722 5.44653 6.97082 5.72013 6.97082 6.05764C6.97082 6.37104 6.73491 6.62934 6.43098 6.66464L6.35971 6.66875H3.91441C3.60101 6.66875 3.34271 6.43284 3.30741 6.12891L3.3033 6.05764V3.61326C3.3033 3.27575 3.5769 3.00215 3.91441 3.00215C4.22781 3.00215 4.48611 3.23806 4.52141 3.54199L4.52552 3.61326L4.52526 4.69795C5.54595 3.63041 6.96952 3 8.5 3ZM8.04167 5.44444C8.27358 5.44444 8.46545 5.61698 8.49581 5.84061L8.5 5.90278V8.5H9.875C10.128 8.5 10.3333 8.70533 10.3333 8.95833C10.3333 9.19025 10.1608 9.38211 9.93717 9.41248L9.875 9.41667H8.04167C7.80975 9.41667 7.61789 9.24413 7.58752 9.0205L7.58333 8.95833V5.90278C7.58333 5.64978 7.78867 5.44444 8.04167 5.44444Z" fill="#7B7B7B"/>
+                        </svg>
+                            <span class="easychat-sidenavbar-content">Download Reports</span></a>
+
+
+
+
+                        <!-- <a class="grey-text text-darken-2 collection-item" href="/chat/settings/" id="settings-chatbot">Settings</a> -->
+                    </div>
+                </div>
+
+                <div class="col s10 offset-s2" id="main-console-container">
+                    <div style="padding-top:1%;">
+
+
+
+                        <!-- <div class="row white center" style="padding:15em;display:none;" id="div-analytics-preloader">
+    <div class="col s12">
+      <h3>Moving to production...</h3>
+      <h5>It might take some time</h5>
+        <img src="/static/EasyChatApp/img/analytics-preloader.svg">
+    </div>
+</div> -->
+
+                        <link rel="stylesheet" type="text/css" href="https://easychat-dev.allincall.in/static/EasyChatApp/css/changes_placement.css?v=48.77">
+                        <link rel="stylesheet" type="text/css" href="https://easychat-dev.allincall.in/static/EasyChatApp/css/edit_bot.css?v=85.18">
+                        <link rel="stylesheet" type="text/css" href="https://easychat-dev.allincall.in/static/EasyChatApp/css/mailer_analytics.css?v=92.62">
+
+                        <style type="text/css">
+                            .select2-dropdown {
+                                top: 0px !important;
+                            }
+                        </style>
+                        <link rel="stylesheet" href="./pdf-searcher.css">
+                        <input type='hidden' name='csrfmiddlewaretoken' value='tQ2sfWPuOMqyWr8moNybovh8jL7zR4fxtru8HNNmbgVf1vc66GdgkIfKDqtZCpbI' />
+                        <div id="pdf-searcher-table">
+                            <div class="container-fluid">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3" style="min-height: 60px;">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h6 class="m-0 font-weight-bold text-primary heading-text-primary">PDF Searcher</h6>
+                                            </div>
+                                            <div class="col-sm-6" id="edit_icon">
+                                                <a title="Edit" style="cursor: pointer;" class="modal-trigger" href="#update-modal" data-toggle="modal">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-theme-color">
+                                <path d="M13.2692 0.730772C14.2436 1.70513 14.2436 3.28489 13.2692 4.25925L4.92447 12.604C4.73142 12.7971 4.49134 12.9364 4.22794 13.0082L0.661097 13.981C0.270732 14.0875 -0.0874597 13.7293 0.0190035 13.3389L0.99178 9.77206C1.06361 9.50867 1.20294 9.26858 1.39599 9.07553L9.74075 0.730772C10.7151 -0.243591 12.2949 -0.243591 13.2692 0.730772ZM9.06478 2.88586L2.13552 9.81506C2.07117 9.87941 2.02473 9.95944 2.00078 10.0472L1.26879 12.7312L3.95276 11.9992C4.04056 11.9753 4.12059 11.9288 4.18494 11.8645L11.114 4.93504L9.06478 2.88586ZM10.4803 1.4703L9.80385 2.1461L11.853 4.19597L12.5297 3.51972C13.0956 2.95379 13.0956 2.03623 12.5297 1.4703C11.9638 0.904373 11.0462 0.904373 10.4803 1.4703Z" fill="#0254D7"></path>
+                            </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="custom-btn-row">
+                                            <div class="custom-filter-container">
+                                                <input type="text" class="pdf_search_bar" id="pdf-search-bar" style="border-bottom: 1px solid #E2E8F0 !important; width: 96% !important;
+                        height: 36px;
+                        background: #FFFFFF;
+                        border-radius: 4px;
+                        flex: none;
+                        order: 0;
+                        flex-grow: 1;
+                        border: 1px solid #E2E8F0 !important;
+                        box-shadow: none!important; 
+                        outline: none!important;
+                        padding-left: 15px;" placeholder="&nbsp; &nbsp; &nbsp; Search">
+                                            </div>
+                                            <div>
+                                                <a class="btn right custom_filter_btn modal-trigger" href="#pdf-search-filter-modal">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.79381 5.20714C5.79381 5.0196 5.71676 4.83973 5.57963 4.70712C5.44249 4.5745 5.25649 4.5 5.06255 4.5C4.86861 4.5 4.68261 4.5745 4.54547 4.70712C4.40833 4.83973 4.33129 5.0196 4.33129 5.20714V10.3467C4.10898 10.4708 3.92437 10.6493 3.79602 10.8643C3.66767 11.0793 3.6001 11.3232 3.6001 11.5714C3.6001 11.8197 3.66767 12.0635 3.79602 12.2785C3.92437 12.4935 4.10898 12.6721 4.33129 12.7962V13.6929C4.33129 13.8804 4.40833 14.0603 4.54547 14.1929C4.68261 14.3255 4.86861 14.4 5.06255 14.4C5.25649 14.4 5.44249 14.3255 5.57963 14.1929C5.71676 14.0603 5.79381 13.8804 5.79381 13.6929V12.7962C6.01612 12.6721 6.20073 12.4935 6.32908 12.2785C6.45743 12.0635 6.525 11.8197 6.525 11.5714C6.525 11.3232 6.45743 11.0793 6.32908 10.8643C6.20073 10.6493 6.01612 10.4708 5.79381 10.3467V5.20714ZM10.1814 5.20714C10.1814 5.0196 10.1043 4.83973 9.96718 4.70712C9.83004 4.5745 9.64404 4.5 9.4501 4.5C9.25616 4.5 9.07016 4.5745 8.93302 4.70712C8.79588 4.83973 8.71884 5.0196 8.71884 5.20714V6.1038C8.49653 6.22793 8.31192 6.40647 8.18357 6.62146C8.05522 6.83645 7.98765 7.08032 7.98765 7.32857C7.98765 7.57682 8.05522 7.82069 8.18357 8.03568C8.31192 8.25067 8.49653 8.42921 8.71884 8.55334V13.6929C8.71884 13.8804 8.79588 14.0603 8.93302 14.1929C9.07016 14.3255 9.25616 14.4 9.4501 14.4C9.64404 14.4 9.83004 14.3255 9.96718 14.1929C10.1043 14.0603 10.1814 13.8804 10.1814 13.6929V8.55334C10.4037 8.42921 10.5883 8.25067 10.7166 8.03568C10.845 7.82069 10.9125 7.57682 10.9125 7.32857C10.9125 7.08032 10.845 6.83645 10.7166 6.62146C10.5883 6.40647 10.4037 6.22793 10.1814 6.1038V5.20714ZM13.8376 4.5C14.0316 4.5 14.2176 4.5745 14.3547 4.70712C14.4919 4.83973 14.5689 5.0196 14.5689 5.20714V10.3467C14.7912 10.4708 14.9758 10.6493 15.1042 10.8643C15.2325 11.0793 15.3001 11.3232 15.3001 11.5714C15.3001 11.8197 15.2325 12.0635 15.1042 12.2785C14.9758 12.4935 14.7912 12.6721 14.5689 12.7962V13.6929C14.5689 13.8804 14.4919 14.0603 14.3547 14.1929C14.2176 14.3255 14.0316 14.4 13.8376 14.4C13.6437 14.4 13.4577 14.3255 13.3206 14.1929C13.1834 14.0603 13.1064 13.8804 13.1064 13.6929V12.7962C12.8841 12.6721 12.6995 12.4935 12.5711 12.2785C12.4428 12.0635 12.3752 11.8197 12.3752 11.5714C12.3752 11.3232 12.4428 11.0793 12.5711 10.8643C12.6995 10.6493 12.8841 10.4708 13.1064 10.3467V5.20714C13.1064 5.0196 13.1834 4.83973 13.3206 4.70712C13.4577 4.5745 13.6437 4.5 13.8376 4.5Z" fill="#4D4D4D"/>
+                            </svg> Filter
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-primary custom_export_btn" data-toggle="modal">
+                            
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 9.58965H2.25V3.24309H4.19625C4.19625 3.24309 4.713 2.61126 5.82375 1.83275H1.5C1.30109 1.83275 1.11032 1.90704 0.96967 2.03929C0.829018 2.17153 0.75 2.3509 0.75 2.53792L0.75 10.2948C0.75 10.4819 0.829018 10.6612 0.96967 10.7935C1.11032 10.9257 1.30109 11 1.5 11H12.75C12.9489 11 13.1397 10.9257 13.2803 10.7935C13.421 10.6612 13.5 10.4819 13.5 10.2948V7.65325L12 8.81326V9.58965ZM10.7708 4.6887V7.19277L15.75 3.52516L10.7708 0V2.2079C4.725 2.2079 4.725 7.82672 4.725 7.82672C6.4365 5.18373 7.4895 4.6887 10.7708 4.6887Z" fill="white"></path>
+                            </svg>
+                            <span>Export</span>
+                        </button>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-primary custom_upload_btn disable-button" data-toggle="modal">
+                            
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.89823 3.00685L8 3C8.3797 3 8.69349 3.28215 8.74315 3.64823L8.75 3.75V7.25H12.25C12.6297 7.25 12.9435 7.53215 12.9932 7.89823L13 8C13 8.3797 12.7178 8.69349 12.3518 8.74315L12.25 8.75H8.75V12.25C8.75 12.6297 8.46785 12.9435 8.10177 12.9932L8 13C7.6203 13 7.30651 12.7178 7.25685 12.3518L7.25 12.25V8.75H3.75C3.3703 8.75 3.05651 8.46785 3.00685 8.10177L3 8C3 7.6203 3.28215 7.30651 3.64823 7.25685L3.75 7.25H7.25V3.75C7.25 3.3703 7.53215 3.05651 7.89823 3.00685L8 3L7.89823 3.00685Z" fill="white"/>
+                            </svg> 
+                            <span>Upload PDF</span>                               
+                        </button>
+                                            </div>
+                                            <div>
+                                                <a class="btn btn-primary start_indexing_btn indexing-active">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9138 3.84331L8.81327 5.94388C8.41879 6.33836 8.41879 6.96952 8.81327 7.34427L10.9138 9.39553C11.5351 10.007 12.5904 9.57304 12.5904 8.69534V7.18648C15.3911 7.65985 17.5213 10.0859 17.5213 13.0148C17.5213 15.7071 15.7264 17.9753 13.261 18.6854C12.8566 18.8037 12.5904 19.1883 12.5904 19.6124V19.642C12.5904 20.2732 13.1919 20.7662 13.8034 20.5887C17.0972 19.6321 19.4937 16.6045 19.4937 13.0148C19.4937 8.9912 16.4759 5.67761 12.5904 5.19438V4.5435C12.5904 3.6658 11.5253 3.23187 10.9138 3.84331ZM4.69115 9.2375C4.41502 9.74046 4.19806 10.2631 4.04027 10.8055C3.85289 11.417 4.34599 12.0284 4.98701 12.0284H5.00673C5.43079 12.0284 5.8154 11.7523 5.93374 11.3381C6.05209 10.9436 6.20988 10.559 6.40711 10.1941C6.61421 9.81935 6.54518 9.35584 6.23946 9.05013L6.2296 9.04027C5.77596 8.58662 4.99687 8.67538 4.69115 9.2375ZM10.6182 19.6023V19.6221C10.6182 20.2631 10.0068 20.7463 9.39532 20.5688C8.85292 20.411 8.33025 20.194 7.82729 19.9179C7.26517 19.6122 7.17641 18.8331 7.63005 18.3795L7.64978 18.3597C7.95549 18.054 8.419 17.985 8.79375 18.1921C9.15864 18.3992 9.54325 18.557 9.93773 18.6753C10.3421 18.7937 10.6182 19.1783 10.6182 19.6023ZM4.70094 16.7917C5.00665 17.3539 5.78574 17.4426 6.23939 16.989C6.53524 16.6931 6.61414 16.2197 6.40704 15.845C6.2098 15.4702 6.05201 15.0856 5.93367 14.6912C5.81533 14.277 5.44058 14.0008 5.00665 14.0008H4.98693C4.34591 14.0008 3.86268 14.6123 4.04019 15.2237C4.20785 15.7661 4.42481 16.2888 4.70094 16.7917Z" fill="white"/>
+                            </svg>
+                                                    <span>Start Indexing</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- /*************** Filter result HTML ***************************/ -->
+
+                                        <div class="easychat-filter-chip-wrapper">
+                                            <div class="filter-items-container" id="applied-filter-result-container">
+                                                <div class="col-md-12 col-sm-12 filter-result-item">
+                                                    <div class="filter-name-text"><span>Date Range</span><button class="filter-remove-icon filter-show-on-mobile"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L10.5 10.5M1.5 10.5L10.5 1.5L1.5 10.5Z" stroke="#DC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></button></div>
+                                                    <div class="chip-area">
+                                                        <div class="filter-chip"><span>Last 30 Days</span><button class="filter-chip-remove-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4.89705 5.05379L4.96967 4.96967C5.23594 4.7034 5.6526 4.6792 5.94621 4.89705L6.03033 4.96967L9 7.939L11.9697 4.96967C12.2626 4.67678 12.7374 4.67678 13.0303 4.96967C13.3232 5.26256 13.3232 5.73744 13.0303 6.03033L10.061 9L13.0303 11.9697C13.2966 12.2359 13.3208 12.6526 13.1029 12.9462L13.0303 13.0303C12.7641 13.2966 12.3474 13.3208 12.0538 13.1029L11.9697 13.0303L9 10.061L6.03033 13.0303C5.73744 13.3232 5.26256 13.3232 4.96967 13.0303C4.67678 12.7374 4.67678 12.2626 4.96967 11.9697L7.939 9L4.96967 6.03033C4.7034 5.76406 4.6792 5.3474 4.89705 5.05379L4.96967 4.96967L4.89705 5.05379Z" fill="#0F248C"/>
+                                                            </svg>
+                                                            </button></div>
+
+                                                    </div>
+                                                    <!-- <button class="filter-remove-icon filter-hide-on-mobile" style="background: transparent !important;" onclick="remove_applied_filter(&quot;title&quot;);"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.89705 2.05379L1.96967 1.96967C2.23594 1.7034 2.6526 1.6792 2.94621 1.89705L3.03033 1.96967L6 4.939L8.96967 1.96967C9.26256 1.67678 9.73744 1.67678 10.0303 1.96967C10.3232 2.26256 10.3232 2.73744 10.0303 3.03033L7.061 6L10.0303 8.96967C10.2966 9.23594 10.3208 9.6526 10.1029 9.94621L10.0303 10.0303C9.76406 10.2966 9.3474 10.3208 9.05379 10.1029L8.96967 10.0303L6 7.061L3.03033 10.0303C2.73744 10.3232 2.26256 10.3232 1.96967 10.0303C1.67678 9.73744 1.67678 9.26256 1.96967 8.96967L4.939 6L1.96967 3.03033C1.7034 2.76406 1.6792 2.3474 1.89705 2.05379L1.96967 1.96967L1.89705 2.05379Z" fill="#FF0000"/>
+                                                        </svg>
+                                                        </button> -->
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 filter-result-item">
+                                                    <div class="filter-name-text"><span>Ticket Status</span><button class="filter-remove-icon filter-show-on-mobile"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L10.5 10.5M1.5 10.5L10.5 1.5L1.5 10.5Z" stroke="#DC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></button></div>
+                                                    <div class="chip-area">
+                                                        <div class="filter-chip"><span>Active</span><button class="filter-chip-remove-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4.89705 5.05379L4.96967 4.96967C5.23594 4.7034 5.6526 4.6792 5.94621 4.89705L6.03033 4.96967L9 7.939L11.9697 4.96967C12.2626 4.67678 12.7374 4.67678 13.0303 4.96967C13.3232 5.26256 13.3232 5.73744 13.0303 6.03033L10.061 9L13.0303 11.9697C13.2966 12.2359 13.3208 12.6526 13.1029 12.9462L13.0303 13.0303C12.7641 13.2966 12.3474 13.3208 12.0538 13.1029L11.9697 13.0303L9 10.061L6.03033 13.0303C5.73744 13.3232 5.26256 13.3232 4.96967 13.0303C4.67678 12.7374 4.67678 12.2626 4.96967 11.9697L7.939 9L4.96967 6.03033C4.7034 5.76406 4.6792 5.3474 4.89705 5.05379L4.96967 4.96967L4.89705 5.05379Z" fill="#0F248C"/>
+                                                            </svg>
+                                                            </button></div>
+                                                        <div class="filter-chip"><span>Indexing</span><button class="filter-chip-remove-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M4.89705 5.05379L4.96967 4.96967C5.23594 4.7034 5.6526 4.6792 5.94621 4.89705L6.03033 4.96967L9 7.939L11.9697 4.96967C12.2626 4.67678 12.7374 4.67678 13.0303 4.96967C13.3232 5.26256 13.3232 5.73744 13.0303 6.03033L10.061 9L13.0303 11.9697C13.2966 12.2359 13.3208 12.6526 13.1029 12.9462L13.0303 13.0303C12.7641 13.2966 12.3474 13.3208 12.0538 13.1029L11.9697 13.0303L9 10.061L6.03033 13.0303C5.73744 13.3232 5.26256 13.3232 4.96967 13.0303C4.67678 12.7374 4.67678 12.2626 4.96967 11.9697L7.939 9L4.96967 6.03033C4.7034 5.76406 4.6792 5.3474 4.89705 5.05379L4.96967 4.96967L4.89705 5.05379Z" fill="#0F248C"/>
+                                                                </svg>
+                                                                </button></div>
+
+                                                    </div>
+                                                    <button class="filter-remove-icon filter-hide-on-mobile" style="background: transparent !important;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.89705 2.05379L1.96967 1.96967C2.23594 1.7034 2.6526 1.6792 2.94621 1.89705L3.03033 1.96967L6 4.939L8.96967 1.96967C9.26256 1.67678 9.73744 1.67678 10.0303 1.96967C10.3232 2.26256 10.3232 2.73744 10.0303 3.03033L7.061 6L10.0303 8.96967C10.2966 9.23594 10.3208 9.6526 10.1029 9.94621L10.0303 10.0303C9.76406 10.2966 9.3474 10.3208 9.05379 10.1029L8.96967 10.0303L6 7.061L3.03033 10.0303C2.73744 10.3232 2.26256 10.3232 1.96967 10.0303C1.67678 9.73744 1.67678 9.26256 1.96967 8.96967L4.939 6L1.96967 3.03033C1.7034 2.76406 1.6792 2.3474 1.89705 2.05379L1.96967 1.96967L1.89705 2.05379Z" fill="#FF0000"/>
+                                                        </svg>
+                                                        
+</button>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 filter-result-item">
+                                                    <div class="filter-name-text"><span>Lead Type</span><button class="filter-remove-icon filter-show-on-mobile"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L10.5 10.5M1.5 10.5L10.5 1.5L1.5 10.5Z" stroke="#DC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></button></div>
+                                                    <div class="chip-area">
+                                                        <div class="filter-chip"><span>lorem ipsum</span><button class="filter-chip-remove-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4.89705 5.05379L4.96967 4.96967C5.23594 4.7034 5.6526 4.6792 5.94621 4.89705L6.03033 4.96967L9 7.939L11.9697 4.96967C12.2626 4.67678 12.7374 4.67678 13.0303 4.96967C13.3232 5.26256 13.3232 5.73744 13.0303 6.03033L10.061 9L13.0303 11.9697C13.2966 12.2359 13.3208 12.6526 13.1029 12.9462L13.0303 13.0303C12.7641 13.2966 12.3474 13.3208 12.0538 13.1029L11.9697 13.0303L9 10.061L6.03033 13.0303C5.73744 13.3232 5.26256 13.3232 4.96967 13.0303C4.67678 12.7374 4.67678 12.2626 4.96967 11.9697L7.939 9L4.96967 6.03033C4.7034 5.76406 4.6792 5.3474 4.89705 5.05379L4.96967 4.96967L4.89705 5.05379Z" fill="#0F248C"/>
+                                                            </svg>
+                                                            </button></div>
+                                                        <div class="filter-chip"><span>lorem ipsum</span><button class="filter-chip-remove-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M4.89705 5.05379L4.96967 4.96967C5.23594 4.7034 5.6526 4.6792 5.94621 4.89705L6.03033 4.96967L9 7.939L11.9697 4.96967C12.2626 4.67678 12.7374 4.67678 13.0303 4.96967C13.3232 5.26256 13.3232 5.73744 13.0303 6.03033L10.061 9L13.0303 11.9697C13.2966 12.2359 13.3208 12.6526 13.1029 12.9462L13.0303 13.0303C12.7641 13.2966 12.3474 13.3208 12.0538 13.1029L11.9697 13.0303L9 10.061L6.03033 13.0303C5.73744 13.3232 5.26256 13.3232 4.96967 13.0303C4.67678 12.7374 4.67678 12.2626 4.96967 11.9697L7.939 9L4.96967 6.03033C4.7034 5.76406 4.6792 5.3474 4.89705 5.05379L4.96967 4.96967L4.89705 5.05379Z" fill="#0F248C"/>
+                                                                </svg>
+                                                                </button></div>
+
+                                                    </div>
+                                                    <button class="filter-remove-icon filter-hide-on-mobile" style="background: transparent !important;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.89705 2.05379L1.96967 1.96967C2.23594 1.7034 2.6526 1.6792 2.94621 1.89705L3.03033 1.96967L6 4.939L8.96967 1.96967C9.26256 1.67678 9.73744 1.67678 10.0303 1.96967C10.3232 2.26256 10.3232 2.73744 10.0303 3.03033L7.061 6L10.0303 8.96967C10.2966 9.23594 10.3208 9.6526 10.1029 9.94621L10.0303 10.0303C9.76406 10.2966 9.3474 10.3208 9.05379 10.1029L8.96967 10.0303L6 7.061L3.03033 10.0303C2.73744 10.3232 2.26256 10.3232 1.96967 10.0303C1.67678 9.73744 1.67678 9.26256 1.96967 8.96967L4.939 6L1.96967 3.03033C1.7034 2.76406 1.6792 2.3474 1.89705 2.05379L1.96967 1.96967L1.89705 2.05379Z" fill="#FF0000"/>
+                                                        </svg>
+                                                        
+</button>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 filter-result-item">
+                                                    <div class="filter-name-text"><span>Type</span><button class="filter-remove-icon filter-show-on-mobile"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L10.5 10.5M1.5 10.5L10.5 1.5L1.5 10.5Z" stroke="#DC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></button></div>
+                                                    <div class="chip-area">
+                                                        <div class="filter-chip"><span>One</span><button class="filter-chip-remove-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4.89705 5.05379L4.96967 4.96967C5.23594 4.7034 5.6526 4.6792 5.94621 4.89705L6.03033 4.96967L9 7.939L11.9697 4.96967C12.2626 4.67678 12.7374 4.67678 13.0303 4.96967C13.3232 5.26256 13.3232 5.73744 13.0303 6.03033L10.061 9L13.0303 11.9697C13.2966 12.2359 13.3208 12.6526 13.1029 12.9462L13.0303 13.0303C12.7641 13.2966 12.3474 13.3208 12.0538 13.1029L11.9697 13.0303L9 10.061L6.03033 13.0303C5.73744 13.3232 5.26256 13.3232 4.96967 13.0303C4.67678 12.7374 4.67678 12.2626 4.96967 11.9697L7.939 9L4.96967 6.03033C4.7034 5.76406 4.6792 5.3474 4.89705 5.05379L4.96967 4.96967L4.89705 5.05379Z" fill="#0F248C"/>
+                                                            </svg>
+                                                            </button></div>
+                                                        <div class="filter-chip"><span>Two</span><button class="filter-chip-remove-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M4.89705 5.05379L4.96967 4.96967C5.23594 4.7034 5.6526 4.6792 5.94621 4.89705L6.03033 4.96967L9 7.939L11.9697 4.96967C12.2626 4.67678 12.7374 4.67678 13.0303 4.96967C13.3232 5.26256 13.3232 5.73744 13.0303 6.03033L10.061 9L13.0303 11.9697C13.2966 12.2359 13.3208 12.6526 13.1029 12.9462L13.0303 13.0303C12.7641 13.2966 12.3474 13.3208 12.0538 13.1029L11.9697 13.0303L9 10.061L6.03033 13.0303C5.73744 13.3232 5.26256 13.3232 4.96967 13.0303C4.67678 12.7374 4.67678 12.2626 4.96967 11.9697L7.939 9L4.96967 6.03033C4.7034 5.76406 4.6792 5.3474 4.89705 5.05379L4.96967 4.96967L4.89705 5.05379Z" fill="#0F248C"/>
+                                                                </svg>
+                                                                </button></div>
+
+                                                    </div>
+                                                    <button class="filter-remove-icon filter-hide-on-mobile" style="background: transparent !important;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.89705 2.05379L1.96967 1.96967C2.23594 1.7034 2.6526 1.6792 2.94621 1.89705L3.03033 1.96967L6 4.939L8.96967 1.96967C9.26256 1.67678 9.73744 1.67678 10.0303 1.96967C10.3232 2.26256 10.3232 2.73744 10.0303 3.03033L7.061 6L10.0303 8.96967C10.2966 9.23594 10.3208 9.6526 10.1029 9.94621L10.0303 10.0303C9.76406 10.2966 9.3474 10.3208 9.05379 10.1029L8.96967 10.0303L6 7.061L3.03033 10.0303C2.73744 10.3232 2.26256 10.3232 1.96967 10.0303C1.67678 9.73744 1.67678 9.26256 1.96967 8.96967L4.939 6L1.96967 3.03033C1.7034 2.76406 1.6792 2.3474 1.89705 2.05379L1.96967 1.96967L1.89705 2.05379Z" fill="#FF0000"/>
+                                                        </svg>
+                                                        
+</button>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 mb-2 filter-padding-0" style="text-align: right; margin-top: -15px;"><button class="clear-all-filter-btn" type="button">Clear Results</button></div>
+                                            </div>
+                                            <div class="filtered-result-text-heading">
+                                                Filtered Results
+                                            </div>
+                                        </div>
+                                        <!-- /*************** Filter result HTML ***************************/ -->
+
+                                        <div class="table-responsive avtive-customer-table" id="pdf_dashboard_table">
+                                            <div id="pdf_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                                <div class="row">
+                                                    <div class="col-sm-12" style="width: 100%;">
+                                                        <table class="dataTable responsive-table highlight" id="pdf_search_table" width="100%" cellspacing="0" role="grid" style="width: 100%;">
+                                                            <thead>
+                                                                <tr role="row">
+                                                                    <th name="name" tabindex="0" rowspan="1" colspan="1">
+                                                                        Name
+                                                                    </th>
+                                                                    <th name="status" tabindex="0" rowspan="1" colspan="1">
+                                                                        Date and Time
+                                                                    </th>
+                                                                    <th name="message_sent" tabindex="0" rowspan="1" colspan="1">
+                                                                        Status
+                                                                    </th>
+                                                                    <th name="message_read" tabindex="0" rowspan="1" colspan="1">
+                                                                        Click Count
+                                                                    </th>
+                                                                    <th name="message_delivered" tabindex="0" rowspan="1" colspan="1">
+                                                                        Search Count
+                                                                    </th>
+                                                                    <th name="open_rate" tabindex="0" rowspan="1" colspan="1">
+                                                                        Open Rate
+                                                                    </th>
+                                                                    <th name="action" tabindex="0" rowspan="1" colspan="1">
+                                                                        Action
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr role="row" class="odd">
+                                                                    <td data-content="Name">
+                                                                        Name 1
+                                                                    </td>
+                                                                    <td data-content="Date and Time">
+                                                                        10-Sep-2021, 05:23 PM
+                                                                    </td>
+                                                                    <td data-content="Status" class="status-active">
+                                                                        Active
+                                                                    </td>
+                                                                    <td data-content="Click Count">
+                                                                        34
+                                                                    </td>
+                                                                    <td data-content="Search Count">
+                                                                        34
+                                                                    </td>
+                                                                    <td data-content="Open Rate">
+                                                                        100%
+                                                                    </td>
+                                                                    <td data-content="Action">
+                                                                        <div class="action-icons">
+                                                                            <svg class="pdf-delete-icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.5 4.5C11.5 3.67157 10.8284 3 10 3C9.17157 3 8.5 3.67157 8.5 4.5H7.5C7.5 3.11929 8.61929 2 10 2C11.3807 2 12.5 3.11929 12.5 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H16.446L15.1499 16.7292C15.0335 17.7384 14.179 18.5 13.1631 18.5H6.83688C5.821 18.5 4.9665 17.7384 4.85006 16.7292L3.553 5.5H3C2.75454 5.5 2.55039 5.32312 2.50806 5.08988L2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H11.5ZM15.438 5.5H4.561L5.84347 16.6146C5.90169 17.1192 6.32894 17.5 6.83688 17.5H13.1631C13.6711 17.5 14.0983 17.1192 14.1565 16.6146L15.438 5.5ZM8.5 8C8.74546 8 8.94961 8.15477 8.99194 8.35886L9 8.4375V14.5625C9 14.8041 8.77614 15 8.5 15C8.25454 15 8.05039 14.8452 8.00806 14.6411L8 14.5625V8.4375C8 8.19588 8.22386 8 8.5 8ZM11.5 8C11.7455 8 11.9496 8.15477 11.9919 8.35886L12 8.4375V14.5625C12 14.8041 11.7761 15 11.5 15C11.2545 15 11.0504 14.8452 11.0081 14.6411L11 14.5625V8.4375C11 8.19588 11.2239 8 11.5 8Z" fill="#FF0000"/>
+                                                    </svg>
+                                                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.4864 8.42997L16.6596 11.6032L10.4284 17.8344C10.2548 18.008 10.0389 18.1333 9.80204 18.1979L6.5945 19.0727C6.24346 19.1684 5.92135 18.8463 6.01709 18.4952L6.89187 15.2877C6.95647 15.0509 7.08176 14.835 7.25536 14.6614L13.4864 8.42997ZM17.9325 7.15722C18.8087 8.03343 18.8087 9.45404 17.9325 10.3302L17.3242 10.938L14.151 7.76535L14.7595 7.15722C15.6357 6.28101 17.0563 6.28101 17.9325 7.15722Z" fill="#475569"/>
+                                                    </svg>
+                                                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.88586 4.72358C8.88586 4.1089 9.38416 3.6106 9.99884 3.6106C10.6135 3.6106 11.1118 4.1089 11.1118 4.72358V9.92748C11.1118 10.0067 11.1761 10.071 11.2553 10.071H12.7816C12.9996 10.0711 13.1976 10.1984 13.288 10.3968C13.3784 10.5952 13.3447 10.8282 13.2018 10.9928L10.419 14.1935C10.3134 14.3152 10.1601 14.3852 9.99884 14.3852C9.83762 14.3852 9.68432 14.3152 9.57868 14.1935L6.79592 10.9928C6.65295 10.8282 6.61924 10.5952 6.70968 10.3968C6.80011 10.1984 6.99804 10.0711 7.21609 10.071H8.74236C8.82161 10.071 8.88586 10.0067 8.88586 9.92748V4.72358ZM15.4259 14.0287C15.4259 13.6445 15.7374 13.333 16.1216 13.333C16.3066 13.3322 16.4843 13.4052 16.6154 13.5357C16.7465 13.6663 16.8202 13.8437 16.8202 14.0287V15.0935C16.8202 16.3615 15.7922 17.3895 14.5242 17.3895H5.47331C4.20638 17.3879 3.18018 16.3604 3.18018 15.0935V14.0287C3.18018 13.6445 3.49165 13.333 3.87586 13.333C4.26008 13.333 4.57155 13.6445 4.57155 14.0287V15.0935C4.57219 15.5911 4.97564 15.9943 5.47331 15.9946H14.5242C15.0218 15.9943 15.4253 15.5911 15.4259 15.0935V14.0287Z" fill="#0F248C"/>
+                                                    </svg>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                    <td data-content="Name">
+                                                                        Name 1
+                                                                    </td>
+                                                                    <td data-content="Date and Time">
+                                                                        10-Sep-2021, 05:23 PM
+                                                                    </td>
+                                                                    <td data-content="Status" class="inactive">
+                                                                        Inactive
+                                                                    </td>
+                                                                    <td data-content="Click Count">
+                                                                        112
+                                                                    </td>
+                                                                    <td data-content="Search Count">
+                                                                        223
+                                                                    </td>
+                                                                    <td data-content="Open Rate">
+                                                                        50%
+                                                                    </td>
+                                                                    <td data-content="Action">
+                                                                        <div class="action-icons">
+                                                                            <svg class="pdf-delete-icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.5 4.5C11.5 3.67157 10.8284 3 10 3C9.17157 3 8.5 3.67157 8.5 4.5H7.5C7.5 3.11929 8.61929 2 10 2C11.3807 2 12.5 3.11929 12.5 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H16.446L15.1499 16.7292C15.0335 17.7384 14.179 18.5 13.1631 18.5H6.83688C5.821 18.5 4.9665 17.7384 4.85006 16.7292L3.553 5.5H3C2.75454 5.5 2.55039 5.32312 2.50806 5.08988L2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H11.5ZM15.438 5.5H4.561L5.84347 16.6146C5.90169 17.1192 6.32894 17.5 6.83688 17.5H13.1631C13.6711 17.5 14.0983 17.1192 14.1565 16.6146L15.438 5.5ZM8.5 8C8.74546 8 8.94961 8.15477 8.99194 8.35886L9 8.4375V14.5625C9 14.8041 8.77614 15 8.5 15C8.25454 15 8.05039 14.8452 8.00806 14.6411L8 14.5625V8.4375C8 8.19588 8.22386 8 8.5 8ZM11.5 8C11.7455 8 11.9496 8.15477 11.9919 8.35886L12 8.4375V14.5625C12 14.8041 11.7761 15 11.5 15C11.2545 15 11.0504 14.8452 11.0081 14.6411L11 14.5625V8.4375C11 8.19588 11.2239 8 11.5 8Z" fill="#FF0000"/>
+                                                    </svg>
+                                                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.4864 8.42997L16.6596 11.6032L10.4284 17.8344C10.2548 18.008 10.0389 18.1333 9.80204 18.1979L6.5945 19.0727C6.24346 19.1684 5.92135 18.8463 6.01709 18.4952L6.89187 15.2877C6.95647 15.0509 7.08176 14.835 7.25536 14.6614L13.4864 8.42997ZM17.9325 7.15722C18.8087 8.03343 18.8087 9.45404 17.9325 10.3302L17.3242 10.938L14.151 7.76535L14.7595 7.15722C15.6357 6.28101 17.0563 6.28101 17.9325 7.15722Z" fill="#475569"/>
+                                                    </svg>
+                                                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.88586 4.72358C8.88586 4.1089 9.38416 3.6106 9.99884 3.6106C10.6135 3.6106 11.1118 4.1089 11.1118 4.72358V9.92748C11.1118 10.0067 11.1761 10.071 11.2553 10.071H12.7816C12.9996 10.0711 13.1976 10.1984 13.288 10.3968C13.3784 10.5952 13.3447 10.8282 13.2018 10.9928L10.419 14.1935C10.3134 14.3152 10.1601 14.3852 9.99884 14.3852C9.83762 14.3852 9.68432 14.3152 9.57868 14.1935L6.79592 10.9928C6.65295 10.8282 6.61924 10.5952 6.70968 10.3968C6.80011 10.1984 6.99804 10.0711 7.21609 10.071H8.74236C8.82161 10.071 8.88586 10.0067 8.88586 9.92748V4.72358ZM15.4259 14.0287C15.4259 13.6445 15.7374 13.333 16.1216 13.333C16.3066 13.3322 16.4843 13.4052 16.6154 13.5357C16.7465 13.6663 16.8202 13.8437 16.8202 14.0287V15.0935C16.8202 16.3615 15.7922 17.3895 14.5242 17.3895H5.47331C4.20638 17.3879 3.18018 16.3604 3.18018 15.0935V14.0287C3.18018 13.6445 3.49165 13.333 3.87586 13.333C4.26008 13.333 4.57155 13.6445 4.57155 14.0287V15.0935C4.57219 15.5911 4.97564 15.9943 5.47331 15.9946H14.5242C15.0218 15.9943 15.4253 15.5911 15.4259 15.0935V14.0287Z" fill="#0F248C"/>
+                                                    </svg>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td data-content="Name">
+                                                                        Name 1
+                                                                    </td>
+                                                                    <td data-content="Date and Time">
+                                                                        10-Sep-2021, 05:23 PM
+                                                                    </td>
+                                                                    <td data-content="Status" class="status-active">
+                                                                        Active
+                                                                    </td>
+                                                                    <td data-content="Click Count">
+                                                                        6
+                                                                    </td>
+                                                                    <td data-content="Search Count">
+                                                                        12
+                                                                    </td>
+                                                                    <td data-content="Open Rate">
+                                                                        50%
+                                                                    </td>
+                                                                    <td data-content="Action">
+                                                                        <div class="action-icons">
+                                                                            <svg class="pdf-delete-icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.5 4.5C11.5 3.67157 10.8284 3 10 3C9.17157 3 8.5 3.67157 8.5 4.5H7.5C7.5 3.11929 8.61929 2 10 2C11.3807 2 12.5 3.11929 12.5 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H16.446L15.1499 16.7292C15.0335 17.7384 14.179 18.5 13.1631 18.5H6.83688C5.821 18.5 4.9665 17.7384 4.85006 16.7292L3.553 5.5H3C2.75454 5.5 2.55039 5.32312 2.50806 5.08988L2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H11.5ZM15.438 5.5H4.561L5.84347 16.6146C5.90169 17.1192 6.32894 17.5 6.83688 17.5H13.1631C13.6711 17.5 14.0983 17.1192 14.1565 16.6146L15.438 5.5ZM8.5 8C8.74546 8 8.94961 8.15477 8.99194 8.35886L9 8.4375V14.5625C9 14.8041 8.77614 15 8.5 15C8.25454 15 8.05039 14.8452 8.00806 14.6411L8 14.5625V8.4375C8 8.19588 8.22386 8 8.5 8ZM11.5 8C11.7455 8 11.9496 8.15477 11.9919 8.35886L12 8.4375V14.5625C12 14.8041 11.7761 15 11.5 15C11.2545 15 11.0504 14.8452 11.0081 14.6411L11 14.5625V8.4375C11 8.19588 11.2239 8 11.5 8Z" fill="#FF0000"/>
+                                                    </svg>
+                                                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.4864 8.42997L16.6596 11.6032L10.4284 17.8344C10.2548 18.008 10.0389 18.1333 9.80204 18.1979L6.5945 19.0727C6.24346 19.1684 5.92135 18.8463 6.01709 18.4952L6.89187 15.2877C6.95647 15.0509 7.08176 14.835 7.25536 14.6614L13.4864 8.42997ZM17.9325 7.15722C18.8087 8.03343 18.8087 9.45404 17.9325 10.3302L17.3242 10.938L14.151 7.76535L14.7595 7.15722C15.6357 6.28101 17.0563 6.28101 17.9325 7.15722Z" fill="#475569"/>
+                                                    </svg>
+                                                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.88586 4.72358C8.88586 4.1089 9.38416 3.6106 9.99884 3.6106C10.6135 3.6106 11.1118 4.1089 11.1118 4.72358V9.92748C11.1118 10.0067 11.1761 10.071 11.2553 10.071H12.7816C12.9996 10.0711 13.1976 10.1984 13.288 10.3968C13.3784 10.5952 13.3447 10.8282 13.2018 10.9928L10.419 14.1935C10.3134 14.3152 10.1601 14.3852 9.99884 14.3852C9.83762 14.3852 9.68432 14.3152 9.57868 14.1935L6.79592 10.9928C6.65295 10.8282 6.61924 10.5952 6.70968 10.3968C6.80011 10.1984 6.99804 10.0711 7.21609 10.071H8.74236C8.82161 10.071 8.88586 10.0067 8.88586 9.92748V4.72358ZM15.4259 14.0287C15.4259 13.6445 15.7374 13.333 16.1216 13.333C16.3066 13.3322 16.4843 13.4052 16.6154 13.5357C16.7465 13.6663 16.8202 13.8437 16.8202 14.0287V15.0935C16.8202 16.3615 15.7922 17.3895 14.5242 17.3895H5.47331C4.20638 17.3879 3.18018 16.3604 3.18018 15.0935V14.0287C3.18018 13.6445 3.49165 13.333 3.87586 13.333C4.26008 13.333 4.57155 13.6445 4.57155 14.0287V15.0935C4.57219 15.5911 4.97564 15.9943 5.47331 15.9946H14.5242C15.0218 15.9943 15.4253 15.5911 15.4259 15.0935V14.0287Z" fill="#0F248C"/>
+                                                    </svg>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                    <td data-content="Name">
+                                                                        Name 1
+                                                                    </td>
+                                                                    <td data-content="Date and Time">
+                                                                        10-Sep-2021, 05:23 PM
+                                                                    </td>
+                                                                    <td data-content="Status" class="not-indexed">
+                                                                        Not indexed
+                                                                    </td>
+                                                                    <td data-content="Click Count">
+                                                                        8
+                                                                    </td>
+                                                                    <td data-content="Search Count">
+                                                                        12
+                                                                    </td>
+                                                                    <td data-content="Open Rate">
+                                                                        66%
+                                                                    </td>
+                                                                    <td data-content="Action">
+                                                                        <div class="action-icons">
+                                                                            <svg class="pdf-delete-icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.5 4.5C11.5 3.67157 10.8284 3 10 3C9.17157 3 8.5 3.67157 8.5 4.5H7.5C7.5 3.11929 8.61929 2 10 2C11.3807 2 12.5 3.11929 12.5 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H16.446L15.1499 16.7292C15.0335 17.7384 14.179 18.5 13.1631 18.5H6.83688C5.821 18.5 4.9665 17.7384 4.85006 16.7292L3.553 5.5H3C2.75454 5.5 2.55039 5.32312 2.50806 5.08988L2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H11.5ZM15.438 5.5H4.561L5.84347 16.6146C5.90169 17.1192 6.32894 17.5 6.83688 17.5H13.1631C13.6711 17.5 14.0983 17.1192 14.1565 16.6146L15.438 5.5ZM8.5 8C8.74546 8 8.94961 8.15477 8.99194 8.35886L9 8.4375V14.5625C9 14.8041 8.77614 15 8.5 15C8.25454 15 8.05039 14.8452 8.00806 14.6411L8 14.5625V8.4375C8 8.19588 8.22386 8 8.5 8ZM11.5 8C11.7455 8 11.9496 8.15477 11.9919 8.35886L12 8.4375V14.5625C12 14.8041 11.7761 15 11.5 15C11.2545 15 11.0504 14.8452 11.0081 14.6411L11 14.5625V8.4375C11 8.19588 11.2239 8 11.5 8Z" fill="#FF0000"/>
+                                                    </svg>
+                                                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.4864 8.42997L16.6596 11.6032L10.4284 17.8344C10.2548 18.008 10.0389 18.1333 9.80204 18.1979L6.5945 19.0727C6.24346 19.1684 5.92135 18.8463 6.01709 18.4952L6.89187 15.2877C6.95647 15.0509 7.08176 14.835 7.25536 14.6614L13.4864 8.42997ZM17.9325 7.15722C18.8087 8.03343 18.8087 9.45404 17.9325 10.3302L17.3242 10.938L14.151 7.76535L14.7595 7.15722C15.6357 6.28101 17.0563 6.28101 17.9325 7.15722Z" fill="#475569"/>
+                                                    </svg>
+                                                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.88586 4.72358C8.88586 4.1089 9.38416 3.6106 9.99884 3.6106C10.6135 3.6106 11.1118 4.1089 11.1118 4.72358V9.92748C11.1118 10.0067 11.1761 10.071 11.2553 10.071H12.7816C12.9996 10.0711 13.1976 10.1984 13.288 10.3968C13.3784 10.5952 13.3447 10.8282 13.2018 10.9928L10.419 14.1935C10.3134 14.3152 10.1601 14.3852 9.99884 14.3852C9.83762 14.3852 9.68432 14.3152 9.57868 14.1935L6.79592 10.9928C6.65295 10.8282 6.61924 10.5952 6.70968 10.3968C6.80011 10.1984 6.99804 10.0711 7.21609 10.071H8.74236C8.82161 10.071 8.88586 10.0067 8.88586 9.92748V4.72358ZM15.4259 14.0287C15.4259 13.6445 15.7374 13.333 16.1216 13.333C16.3066 13.3322 16.4843 13.4052 16.6154 13.5357C16.7465 13.6663 16.8202 13.8437 16.8202 14.0287V15.0935C16.8202 16.3615 15.7922 17.3895 14.5242 17.3895H5.47331C4.20638 17.3879 3.18018 16.3604 3.18018 15.0935V14.0287C3.18018 13.6445 3.49165 13.333 3.87586 13.333C4.26008 13.333 4.57155 13.6445 4.57155 14.0287V15.0935C4.57219 15.5911 4.97564 15.9943 5.47331 15.9946H14.5242C15.0218 15.9943 15.4253 15.5911 15.4259 15.0935V14.0287Z" fill="#0F248C"/>
+                                                    </svg>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td data-content="Name">
+                                                                        Name 1
+                                                                    </td>
+                                                                    <td data-content="Date and Time">
+                                                                        10-Sep-2021, 05:23 PM
+                                                                    </td>
+                                                                    <td data-content="Status" class="indexing">
+                                                                        Indexing
+                                                                    </td>
+                                                                    <td data-content="Click Count">
+                                                                        12
+                                                                    </td>
+                                                                    <td data-content="Search Count">
+                                                                        12
+                                                                    </td>
+                                                                    <td data-content="Open Rate">
+                                                                        100%
+                                                                    </td>
+                                                                    <td data-content="Action">
+                                                                        <div class="action-icons">
+                                                                            <svg class="pdf-delete-icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.5 4.5C11.5 3.67157 10.8284 3 10 3C9.17157 3 8.5 3.67157 8.5 4.5H7.5C7.5 3.11929 8.61929 2 10 2C11.3807 2 12.5 3.11929 12.5 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H16.446L15.1499 16.7292C15.0335 17.7384 14.179 18.5 13.1631 18.5H6.83688C5.821 18.5 4.9665 17.7384 4.85006 16.7292L3.553 5.5H3C2.75454 5.5 2.55039 5.32312 2.50806 5.08988L2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H11.5ZM15.438 5.5H4.561L5.84347 16.6146C5.90169 17.1192 6.32894 17.5 6.83688 17.5H13.1631C13.6711 17.5 14.0983 17.1192 14.1565 16.6146L15.438 5.5ZM8.5 8C8.74546 8 8.94961 8.15477 8.99194 8.35886L9 8.4375V14.5625C9 14.8041 8.77614 15 8.5 15C8.25454 15 8.05039 14.8452 8.00806 14.6411L8 14.5625V8.4375C8 8.19588 8.22386 8 8.5 8ZM11.5 8C11.7455 8 11.9496 8.15477 11.9919 8.35886L12 8.4375V14.5625C12 14.8041 11.7761 15 11.5 15C11.2545 15 11.0504 14.8452 11.0081 14.6411L11 14.5625V8.4375C11 8.19588 11.2239 8 11.5 8Z" fill="#FF0000"/>
+                                                    </svg>
+                                                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.4864 8.42997L16.6596 11.6032L10.4284 17.8344C10.2548 18.008 10.0389 18.1333 9.80204 18.1979L6.5945 19.0727C6.24346 19.1684 5.92135 18.8463 6.01709 18.4952L6.89187 15.2877C6.95647 15.0509 7.08176 14.835 7.25536 14.6614L13.4864 8.42997ZM17.9325 7.15722C18.8087 8.03343 18.8087 9.45404 17.9325 10.3302L17.3242 10.938L14.151 7.76535L14.7595 7.15722C15.6357 6.28101 17.0563 6.28101 17.9325 7.15722Z" fill="#475569"/>
+                                                    </svg>
+                                                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.88586 4.72358C8.88586 4.1089 9.38416 3.6106 9.99884 3.6106C10.6135 3.6106 11.1118 4.1089 11.1118 4.72358V9.92748C11.1118 10.0067 11.1761 10.071 11.2553 10.071H12.7816C12.9996 10.0711 13.1976 10.1984 13.288 10.3968C13.3784 10.5952 13.3447 10.8282 13.2018 10.9928L10.419 14.1935C10.3134 14.3152 10.1601 14.3852 9.99884 14.3852C9.83762 14.3852 9.68432 14.3152 9.57868 14.1935L6.79592 10.9928C6.65295 10.8282 6.61924 10.5952 6.70968 10.3968C6.80011 10.1984 6.99804 10.0711 7.21609 10.071H8.74236C8.82161 10.071 8.88586 10.0067 8.88586 9.92748V4.72358ZM15.4259 14.0287C15.4259 13.6445 15.7374 13.333 16.1216 13.333C16.3066 13.3322 16.4843 13.4052 16.6154 13.5357C16.7465 13.6663 16.8202 13.8437 16.8202 14.0287V15.0935C16.8202 16.3615 15.7922 17.3895 14.5242 17.3895H5.47331C4.20638 17.3879 3.18018 16.3604 3.18018 15.0935V14.0287C3.18018 13.6445 3.49165 13.333 3.87586 13.333C4.26008 13.333 4.57155 13.6445 4.57155 14.0287V15.0935C4.57219 15.5911 4.97564 15.9943 5.47331 15.9946H14.5242C15.0218 15.9943 15.4253 15.5911 15.4259 15.0935V14.0287Z" fill="#0F248C"/>
+                                                    </svg>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                    <td data-content="Name">
+                                                                        Name 1
+                                                                    </td>
+                                                                    <td data-content="Date and Time">
+                                                                        10-Sep-2021, 05:23 PM
+                                                                    </td>
+                                                                    <td data-content="Status" class="status-active">
+                                                                        Active
+                                                                    </td>
+                                                                    <td data-content="Click Count">
+                                                                        24
+                                                                    </td>
+                                                                    <td data-content="Search Count">
+                                                                        43
+                                                                    </td>
+                                                                    <td data-content="Open Rate">
+                                                                        56%
+                                                                    </td>
+                                                                    <td data-content="Action">
+                                                                        <div class="action-icons">
+                                                                            <svg class="pdf-delete-icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.5 4.5C11.5 3.67157 10.8284 3 10 3C9.17157 3 8.5 3.67157 8.5 4.5H7.5C7.5 3.11929 8.61929 2 10 2C11.3807 2 12.5 3.11929 12.5 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H16.446L15.1499 16.7292C15.0335 17.7384 14.179 18.5 13.1631 18.5H6.83688C5.821 18.5 4.9665 17.7384 4.85006 16.7292L3.553 5.5H3C2.75454 5.5 2.55039 5.32312 2.50806 5.08988L2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H11.5ZM15.438 5.5H4.561L5.84347 16.6146C5.90169 17.1192 6.32894 17.5 6.83688 17.5H13.1631C13.6711 17.5 14.0983 17.1192 14.1565 16.6146L15.438 5.5ZM8.5 8C8.74546 8 8.94961 8.15477 8.99194 8.35886L9 8.4375V14.5625C9 14.8041 8.77614 15 8.5 15C8.25454 15 8.05039 14.8452 8.00806 14.6411L8 14.5625V8.4375C8 8.19588 8.22386 8 8.5 8ZM11.5 8C11.7455 8 11.9496 8.15477 11.9919 8.35886L12 8.4375V14.5625C12 14.8041 11.7761 15 11.5 15C11.2545 15 11.0504 14.8452 11.0081 14.6411L11 14.5625V8.4375C11 8.19588 11.2239 8 11.5 8Z" fill="#FF0000"/>
+                                                    </svg>
+                                                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.4864 8.42997L16.6596 11.6032L10.4284 17.8344C10.2548 18.008 10.0389 18.1333 9.80204 18.1979L6.5945 19.0727C6.24346 19.1684 5.92135 18.8463 6.01709 18.4952L6.89187 15.2877C6.95647 15.0509 7.08176 14.835 7.25536 14.6614L13.4864 8.42997ZM17.9325 7.15722C18.8087 8.03343 18.8087 9.45404 17.9325 10.3302L17.3242 10.938L14.151 7.76535L14.7595 7.15722C15.6357 6.28101 17.0563 6.28101 17.9325 7.15722Z" fill="#475569"/>
+                                                    </svg>
+                                                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.88586 4.72358C8.88586 4.1089 9.38416 3.6106 9.99884 3.6106C10.6135 3.6106 11.1118 4.1089 11.1118 4.72358V9.92748C11.1118 10.0067 11.1761 10.071 11.2553 10.071H12.7816C12.9996 10.0711 13.1976 10.1984 13.288 10.3968C13.3784 10.5952 13.3447 10.8282 13.2018 10.9928L10.419 14.1935C10.3134 14.3152 10.1601 14.3852 9.99884 14.3852C9.83762 14.3852 9.68432 14.3152 9.57868 14.1935L6.79592 10.9928C6.65295 10.8282 6.61924 10.5952 6.70968 10.3968C6.80011 10.1984 6.99804 10.0711 7.21609 10.071H8.74236C8.82161 10.071 8.88586 10.0067 8.88586 9.92748V4.72358ZM15.4259 14.0287C15.4259 13.6445 15.7374 13.333 16.1216 13.333C16.3066 13.3322 16.4843 13.4052 16.6154 13.5357C16.7465 13.6663 16.8202 13.8437 16.8202 14.0287V15.0935C16.8202 16.3615 15.7922 17.3895 14.5242 17.3895H5.47331C4.20638 17.3879 3.18018 16.3604 3.18018 15.0935V14.0287C3.18018 13.6445 3.49165 13.333 3.87586 13.333C4.26008 13.333 4.57155 13.6445 4.57155 14.0287V15.0935C4.57219 15.5911 4.97564 15.9943 5.47331 15.9946H14.5242C15.0218 15.9943 15.4253 15.5911 15.4259 15.0935V14.0287Z" fill="#0F248C"/>
+                                                    </svg>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-5">
+
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-7">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3" id="pdf_table_pagination_div">
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="d-flex justify-content-end">
+                                                    <nav aria-label="Page navigation example" style="box-shadow: none;">
+                                                        <ul class="pagination">
+                                                            <li class="page-item ">
+                                                                <a class="page-link previous_button" href="javascript:void(0)" aria-label="Previous">
+                                                                    <span aria-hidden="true">
+                                                Previous
+                                            </span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="active  page-item">
+                                                                <a data-page="1" href="javascript:void(0)" class="page-link">
+                                            1
+                                        </a>
+                                                            </li>
+                                                            <li class=" page-item">
+                                                                <a data-page="2" href="javascript:void(0)" class="page-link">
+                                            2
+                                        </a>
+                                                            </li>
+                                                            <li class=" page-item">
+                                                                <a data-page="3" href="javascript:void(0)" class="page-link">
+                                            3
+                                        </a>
+                                                            </li>
+                                                            <li class=" page-item">
+                                                                <a data-page="4" href="javascript:void(0)" class="page-link">
+                                            4
+                                        </a>
+                                                            </li>
+                                                            <li class="page-item ">
+                                                                <a class="page-link next_button" href="javascript:void(0)" aria-label="Previous">
+                                                                    <span aria-hidden="true">
+                                                Next
+                                            </span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Filter modal -->
+                <div id="pdf-search-filter-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="row" style="margin-bottom: 12px !important;">
+                            <div class="modal-header">
+                                <h6>Apply filter</h6>
+                                <a href="javascript:void(0)" class="modal-close-btn modal-close">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.9247 6.12377C18.7379 5.93652 18.4842 5.83129 18.2197 5.83129C17.9552 5.83129 17.7016 5.93652 17.5147 6.12377L12.6247 11.0038L7.73473 6.11377C7.5479 5.92652 7.29424 5.82129 7.02973 5.82129C6.76521 5.82129 6.51156 5.92652 6.32473 6.11377C5.93473 6.50377 5.93473 7.13377 6.32473 7.52377L11.2147 12.4138L6.32473 17.3038C5.93473 17.6938 5.93473 18.3238 6.32473 18.7138C6.71473 19.1038 7.34473 19.1038 7.73473 18.7138L12.6247 13.8238L17.5147 18.7138C17.9047 19.1038 18.5347 19.1038 18.9247 18.7138C19.3147 18.3238 19.3147 17.6938 18.9247 17.3038L14.0347 12.4138L18.9247 7.52377C19.3047 7.14377 19.3047 6.50377 18.9247 6.12377Z" fill="black" fill-opacity="0.54"></path>
+                    </svg>
+
+                                </a>
+                            </div>
+
+                            <div class="modal-overflow-content-div">
+                                <div class="col s12 date-range-filter-select-area">
+                                    <div class="filter-heading">
+                                        Select Date range
+                                    </div>
+                                    <label onclick="show_custom_date();">
+                
+                <input type="radio" name="date-range-filter-btn" id="date_range_1" checked="">
+                
+                <div class=" filter-box">
+                  <span>Last 7 days</span>
+                </div>
+              </label>
+                                    <label onclick="show_custom_date();">
+                
+                <input type="radio" name="date-range-filter-btn" id="date_range_2">
+                
+                <div class=" filter-box">
+                  <span>Last 30 days</span>
+                </div>
+              </label>
+                                    <label onclick="show_custom_date();">
+                
+                <input type="radio" name="date-range-filter-btn" id="date_range_3">
+                
+                <div class=" filter-box">
+                  <span>Last 90 days</span>
+                </div>
+              </label>
+                                    <label onclick="show_custom_date();">
+                
+                <input type="radio" name="date-range-filter-btn" id="date_range_4">
+                
+                <div class=" filter-box">
+                  <span>Custom Dates</span>
+                </div>
+              </label>
+                                    <label onclick="show_custom_date();">
+                
+                <input type="radio" name="date-range-filter-btn" id="date_range_5">
+                
+                <div class=" filter-box">
+                  <span>From beginning</span>
+                </div>
+              </label>
+
+
+
+                                </div>
+
+                                <div class="col s10 analytics-custom-date-select-area" id="analytics-custom-date-select-area" style="display: none;">
+
+
+                                    <div class="easychat-calendar-div-wrapper">
+                                        <div class="easychat-calendar-div" id="calendar-div-1" style="left: 1%;height: 190px;flex-shrink: 0;">
+                                            <label style="margin-left: -60%;color: #2D2D2D;">From</label>
+                                            <div class="main-wrapping-div">
+                                                <div class="easychat-date-btn">
+                                                    <input type="button" id="datepicker-1-0" onclick="handle_date_picker_open(event)" onchange="changed_date('1-0','Double datetime',this)" style="width: 100px !important; opacity: 0;" class="date-time-picker-btns easychat-datepicker-btn" value="09/27/2021">
+                                                    <div class="date-displayer datepicker" id="date-displayer-1-0" onclick="handle_date_picker_open(event)" style="margin-top: -43px;">
+                                                        <div class="row" style="display: flex; justify-content: center;">
+                                                            <div class="col s6 date">27</div>
+                                                            <div class="col s6" style=" padding-left: 0">
+                                                                <div class="row month-year" style="margin-bottom: 1px !important;margin-top: 8px !important;">Sep 2021</div>
+                                                                <div class="row day">Tuesday</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="easychat-time-btn">
+                                                    <input type="button" id="time-picker-btn-1-0" class="date-time-picker-btns easychat-timepicker-btn" value="12 : 00 AM" onclick="handle_time_picker_click('1-0')" style="width: 100px !important;">
+                                                </div>
+                                            </div>
+                                            <hr style="width: 85%;border: none;border-bottom: 1px solid #e5e5e5; margin-top: 18px; margin-bottom: 10px ">
+                                            <label style="margin-left: -64%;color: #2D2D2D;">To</label>
+                                            <div class="main-wrapping-div">
+                                                <div class="easychat-date-btn">
+                                                    <input type="button" id="datepicker-1-1" onclick="handle_date_picker_open(event)" onchange="changed_date('1-1','Double datetime',this)" style="width: 100px !important; opacity: 0;" class="date-time-picker-btns easychat-datepicker-btn" value="09/27/2021">
+                                                    <div class="date-displayer datepicker" id="date-displayer-1-1" onclick="handle_date_picker_open(event)" style="margin-top: -43px;">
+                                                        <div class="row" style="display: flex; justify-content: center;">
+                                                            <div class="col s6 date">27</div>
+                                                            <div class="col s6" style=" padding-left: 0">
+                                                                <div class="row month-year" style="margin-bottom: 1px !important;margin-top: 8px !important;">Sep 2021</div>
+                                                                <div class="row day">Tuesday</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="easychat-time-btn">
+                                                    <input type="button" id="time-picker-btn-1-1" class="date-time-picker-btns easychat-timepicker-btn" value="11 : 59 PM" onclick="handle_time_picker_click('1-1')" style="width: 100px !important;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reset-icon" style="margin-left: 10px;margin-top: 12px;cursor: pointer;">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="refresh_timestamp()">
+                            <path d="M13.146 11.0499L12.9717 9.05752L15.3463 8.84977C14.4472 7.98322 13.2243 7.4503 11.877 7.4503C9.11553 7.4503 6.87695 9.68888 6.87695 12.4503C6.87695 15.2117 9.11553 17.4503 11.877 17.4503C13.6977 17.4503 15.2912 16.4771 16.1655 15.0224L18.1682 15.5231C17.0302 17.8487 14.6406 19.4503 11.877 19.4503C8.01096 19.4503 4.87695 16.3163 4.87695 12.4503C4.87695 8.58431 8.01096 5.4503 11.877 5.4503C13.8234 5.4503 15.5843 6.24474 16.8531 7.52706L16.6078 4.72412L18.6002 4.5498L19.1232 10.527L13.146 11.0499Z" fill="#2D2D2D"></path>
+                        </svg>
+                                        </div>
+                                        <div id="timepicker-container-1-0">
+                                            <div class="custom-timepicker">
+                                                <div class="custom-timepicker-heading">
+                                                    <div class="custom-timepicker-heading-text">
+                                                        Select Time
+                                                    </div>
+                                                    <div class="cross-icon" onclick="close_time_modal('1-0')">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1995 3.80664C12.0749 3.6818 11.9058 3.61165 11.7295 3.61165C11.5531 3.61165 11.384 3.6818 11.2595 3.80664L7.99949 7.05997L4.73949 3.79997C4.61494 3.67514 4.44584 3.60498 4.26949 3.60498C4.09315 3.60498 3.92405 3.67514 3.79949 3.79997C3.53949 4.05997 3.53949 4.47997 3.79949 4.73997L7.05949 7.99997L3.79949 11.26C3.53949 11.52 3.53949 11.94 3.79949 12.2C4.05949 12.46 4.47949 12.46 4.73949 12.2L7.99949 8.93997L11.2595 12.2C11.5195 12.46 11.9395 12.46 12.1995 12.2C12.4595 11.94 12.4595 11.52 12.1995 11.26L8.93949 7.99997L12.1995 4.73997C12.4528 4.48664 12.4528 4.05997 12.1995 3.80664Z" fill="#7B7B7B"></path>
+                                    </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-timepicker-body">
+                                                    <div class="hr-clock" onclick="handle_click_time('1-0')">
+                                                        <ul>
+                                                            <li><label for="timepickerhrone-1-0" class="ppppp">01</label><input id="timepickerhrone-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrtwo-1-0">02</label><input id="timepickerhrtwo-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrthree-1-0">03</label><input id="timepickerhrthree-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrfour-1-0">04</label><input id="timepickerhrfour-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrfive-1-0">05</label><input id="timepickerhrfive-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrsix-1-0">06</label><input id="timepickerhrsix-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrseven-1-0">07</label><input id="timepickerhrseven-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhreight-1-0">08</label><input id="timepickerhreight-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrnine-1-0">09</label><input id="timepickerhrnine-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrten-1-0">10</label><input id="timepickerhrten-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhreleven-1-0">11</label><input id="timepickerhreleven-1-0" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrtwelve-1-0">12</label><input id="timepickerhrtwelve-1-0" type="radio" name="hrvalue"></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="min-clock" onclick="handle_click_time('1-0')">
+                                                        <ul>
+                                                            <li><label for="timepickerminzero-1-0">00</label><input id="timepickerminzero-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminone-1-0">01</label><input id="timepickerminone-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwo-1-0">02</label><input id="timepickermintwo-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthree-1-0">03</label><input id="timepickerminthree-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfour-1-0">04</label><input id="timepickerminfour-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfive-1-0">05</label><input id="timepickerminfive-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminsix-1-0">06</label><input id="timepickerminsix-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminseven-1-0">07</label><input id="timepickerminseven-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermineight-1-0">08</label><input id="timepickermineight-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminnine-1-0">09</label><input id="timepickerminnine-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminten-1-0">10</label><input id="timepickerminten-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermineleven-1-0">11</label><input id="timepickermineleven-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwelve-1-0">12</label><input id="timepickermintwelve-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirteen-1-0">13</label><input id="timepickerminthirteen-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfourteen-1-0">14</label><input id="timepickerminfourteen-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfifteen-1-0">15</label><input id="timepickerminfifteen-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminsixteen-1-0">16</label><input id="timepickerminsixteen-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminseventeen-1-0">17</label><input id="timepickerminseventeen-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermineighteen-1-0">18</label><input id="timepickermineighteen-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminnineteen-1-0">19</label><input id="timepickerminnineteen-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwenty-1-0">20</label><input id="timepickermintwenty-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyone-1-0">21</label><input id="timepickermintwentyone-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentytwo-1-0">22</label><input id="timepickermintwentytwo-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentythree-1-0">23</label><input id="timepickermintwentythree-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyfour-1-0">24</label><input id="timepickermintwentyfour-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyfive-1-0">25</label><input id="timepickermintwentyfive-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentysix-1-0">26</label><input id="timepickermintwentysix-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyseven-1-0">27</label><input id="timepickermintwentyseven-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyeight-1-0">28</label><input id="timepickermintwentyeight-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentynine-1-0">29</label><input id="timepickermintwentynine-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirty-1-0">30</label><input id="timepickerminthirty-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyone-1-0">31</label><input id="timepickerminthirtyone-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtytwo-1-0">32</label><input id="timepickerminthirtytwo-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtythree-1-0">33</label><input id="timepickerminthirtythree-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyfour-1-0">34</label><input id="timepickerminthirtyfour-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyfive-1-0">35</label><input id="timepickerminthirtyfive-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtysix-1-0">36</label><input id="timepickerminthirtysix-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyseven-1-0">37</label><input id="timepickerminthirtyseven-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyeight-1-0">38</label><input id="timepickerminthirtyeight-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtynine-1-0">39</label><input id="timepickerminthirtynine-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminforty-1-0">40</label><input id="timepickerminforty-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyone-1-0">41</label><input id="timepickerminfortyone-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortytwo-1-0">42</label><input id="timepickerminfortytwo-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortythree-1-0">43</label><input id="timepickerminfortythree-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyfour-1-0">44</label><input id="timepickerminfortyfour-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyfive-1-0">45</label><input id="timepickerminfortyfive-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortysix-1-0">46</label><input id="timepickerminfortysix-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyseven-1-0">47</label><input id="timepickerminfortyseven-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyeight-1-0">48</label><input id="timepickerminfortyeight-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortynine-1-0">49</label><input id="timepickerminfortynine-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfifty-1-0">50</label><input id="timepickerminfifty-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyone-1-0">51</label><input id="timepickerminfiftyone-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftytwo-1-0">52</label><input id="timepickerminfiftytwo-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftythree-1-0">53</label><input id="timepickerminfiftythree-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyfour-1-0">54</label><input id="timepickerminfiftyfour-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyfive-1-0">55</label><input id="timepickerminfiftyfive-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftysix-1-0">56</label><input id="timepickerminfiftysix-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyseven-1-0">57</label><input id="timepickerminfiftyseven-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyeight-1-0">58</label><input id="timepickerminfiftyeight-1-0" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftynine-1-0">59</label><input id="timepickerminfiftynine-1-0" type="radio" name="minvalue"></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ampm-clock" onclick="handle_click_time('1-0')">
+                                                        <ul>
+                                                            <li><label for="timepickerampmAM-1-0" style="padding: 8px 6px;right: 8%;position: relative;">AM</label><input type="radio" id="timepickerampmAM-1-0" name="ampmvalue"></li>
+                                                            <li><label for="timepickerampmPM-1-0" style="padding: 8px 6px;right: 8%;position: relative;">PM</label><input type="radio" id="timepickerampmPM-1-0" name="ampmvalue"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-timepicker-footer">
+                                                    <button type="submit" class="cancel-btn btn" onclick="close_time_modal('1-0')">Cancel</button>
+                                                    <button type="submit" class="submit-btn btn" onclick="handle_save_time('1-0')">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="timepicker-container-1-1">
+                                            <div class="custom-timepicker">
+                                                <div class="custom-timepicker-heading">
+                                                    <div class="custom-timepicker-heading-text">
+                                                        Select Time
+                                                    </div>
+                                                    <div class="cross-icon" onclick="close_time_modal('1-1')">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1995 3.80664C12.0749 3.6818 11.9058 3.61165 11.7295 3.61165C11.5531 3.61165 11.384 3.6818 11.2595 3.80664L7.99949 7.05997L4.73949 3.79997C4.61494 3.67514 4.44584 3.60498 4.26949 3.60498C4.09315 3.60498 3.92405 3.67514 3.79949 3.79997C3.53949 4.05997 3.53949 4.47997 3.79949 4.73997L7.05949 7.99997L3.79949 11.26C3.53949 11.52 3.53949 11.94 3.79949 12.2C4.05949 12.46 4.47949 12.46 4.73949 12.2L7.99949 8.93997L11.2595 12.2C11.5195 12.46 11.9395 12.46 12.1995 12.2C12.4595 11.94 12.4595 11.52 12.1995 11.26L8.93949 7.99997L12.1995 4.73997C12.4528 4.48664 12.4528 4.05997 12.1995 3.80664Z" fill="#7B7B7B"></path>
+                                    </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-timepicker-body">
+                                                    <div class="hr-clock" onclick="handle_click_time('1-1')">
+                                                        <ul>
+                                                            <li><label for="timepickerhrone-1-1" class="skdjankdjank">01</label><input id="timepickerhrone-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrtwo-1-1">02</label><input id="timepickerhrtwo-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrthree-1-1">03</label><input id="timepickerhrthree-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrfour-1-1">04</label><input id="timepickerhrfour-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrfive-1-1">05</label><input id="timepickerhrfive-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrsix-1-1">06</label><input id="timepickerhrsix-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrseven-1-1">07</label><input id="timepickerhrseven-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhreight-1-1">08</label><input id="timepickerhreight-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrnine-1-1">09</label><input id="timepickerhrnine-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrten-1-1">10</label><input id="timepickerhrten-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhreleven-1-1">11</label><input id="timepickerhreleven-1-1" type="radio" name="hrvalue"></li>
+                                                            <li><label for="timepickerhrtwelve-1-1">12</label><input id="timepickerhrtwelve-1-1" type="radio" name="hrvalue"></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="min-clock" onclick="handle_click_time('1-1')">
+                                                        <ul>
+                                                            <li><label for="timepickerminzero-1-1">00</label><input id="timepickerminzero-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminone-1-1">01</label><input id="timepickerminone-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwo-1-1">02</label><input id="timepickermintwo-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthree-1-1">03</label><input id="timepickerminthree-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfour-1-1">04</label><input id="timepickerminfour-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfive-1-1">05</label><input id="timepickerminfive-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminsix-1-1">06</label><input id="timepickerminsix-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminseven-1-1">07</label><input id="timepickerminseven-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermineight-1-1">08</label><input id="timepickermineight-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminnine-1-1">09</label><input id="timepickerminnine-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminten-1-1">10</label><input id="timepickerminten-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermineleven-1-1">11</label><input id="timepickermineleven-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwelve-1-1">12</label><input id="timepickermintwelve-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirteen-1-1">13</label><input id="timepickerminthirteen-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfourteen-1-1">14</label><input id="timepickerminfourteen-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfifteen-1-1">15</label><input id="timepickerminfifteen-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminsixteen-1-1">16</label><input id="timepickerminsixteen-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminseventeen-1-1">17</label><input id="timepickerminseventeen-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermineighteen-1-1">18</label><input id="timepickermineighteen-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminnineteen-1-1">19</label><input id="timepickerminnineteen-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwenty-1-1">20</label><input id="timepickermintwenty-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyone-1-1">21</label><input id="timepickermintwentyone-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentytwo-1-1">22</label><input id="timepickermintwentytwo-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentythree-1-1">23</label><input id="timepickermintwentythree-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyfour-1-1">24</label><input id="timepickermintwentyfour-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyfive-1-1">25</label><input id="timepickermintwentyfive-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentysix-1-1">26</label><input id="timepickermintwentysix-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyseven-1-1">27</label><input id="timepickermintwentyseven-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentyeight-1-1">28</label><input id="timepickermintwentyeight-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickermintwentynine-1-1">29</label><input id="timepickermintwentynine-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirty-1-1">30</label><input id="timepickerminthirty-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyone-1-1">31</label><input id="timepickerminthirtyone-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtytwo-1-1">32</label><input id="timepickerminthirtytwo-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtythree-1-1">33</label><input id="timepickerminthirtythree-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyfour-1-1">34</label><input id="timepickerminthirtyfour" -1-1="" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyfive-1-1">35</label><input id="timepickerminthirtyfive-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtysix-1-1">36</label><input id="timepickerminthirtysix-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyseven-1-1">37</label><input id="timepickerminthirtyseven-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtyeight-1-1">38</label><input id="timepickerminthirtyeight-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminthirtynine-1-1">39</label><input id="timepickerminthirtynine-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminforty-1-1">40</label><input id="timepickerminforty-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyone-1-1">41</label><input id="timepickerminfortyone-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortytwo-1-1">42</label><input id="timepickerminfortytwo-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortythree-1-1">43</label><input id="timepickerminfortythree-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyfour-1-1">44</label><input id="timepickerminfortyfour-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyfive-1-1">45</label><input id="timepickerminfortyfive-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortysix-1-1">46</label><input id="timepickerminfortysix-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyseven-1-1">47</label><input id="timepickerminfortyseven-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortyeight-1-1">48</label><input id="timepickerminfortyeight-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfortynine-1-1">49</label><input id="timepickerminfortynine-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfifty-1-1">50</label><input id="timepickerminfifty-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyone-1-1">51</label><input id="timepickerminfiftyone-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftytwo-1-1">52</label><input id="timepickerminfiftytwo-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftythree-1-1">53</label><input id="timepickerminfiftythree-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyfour-1-1">54</label><input id="timepickerminfiftyfour-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyfive-1-1">55</label><input id="timepickerminfiftyfive-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftysix-1-1">56</label><input id="timepickerminfiftysix-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyseven-1-1">57</label><input id="timepickerminfiftyseven-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftyeight-1-1">58</label><input id="timepickerminfiftyeight-1-1" type="radio" name="minvalue"></li>
+                                                            <li><label for="timepickerminfiftynine-1-1">59</label><input id="timepickerminfiftynine-1-1" type="radio" name="minvalue"></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ampm-clock" onclick="handle_click_time('1-1')">
+                                                        <ul>
+                                                            <li><label for="timepickerampmAM-1-1" style="padding: 8px 6px;right: 8%;position: relative;">AM</label><input type="radio" id="timepickerampmAM-1-1" name="ampmvalue"></li>
+                                                            <li><label for="timepickerampmPM-1-1" style="padding: 8px 6px;right: 8%;position: relative;">PM</label><input type="radio" id="timepickerampmPM-1-1" name="ampmvalue"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-timepicker-footer">
+                                                    <button type="submit" class="cancel-btn btn" onclick="close_time_modal('1-1')">Cancel</button>
+                                                    <button type="submit" class="submit-btn btn" onclick="handle_save_time('1-1')">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col s12 analytics-status-select-area">
+                                    <div class="filter-heading">
+                                        Select Status
+                                    </div>
+
+                                    <label>
+                
+                        <input type="radio" id="status_1">
+                        
+                        <div class="status-box">
+                          <span>Active</span>
+                        </div>
+                      </label>
+                                    <label>
+                        
+                        <input type="radio" id="status_2">
+                        
+                        <div class="status-box">
+                          <span>Inactive</span>
+                        </div>
+                      </label>
+                                    <label>
+                        
+                        <input type="radio" id="status_3">
+                        
+                        <div class="status-box">
+                          <span>Indexing</span>
+                        </div>
+                      </label>
+                                    <label>
+                        
+                        <input type="radio" id="status_4">
+                        
+                        <div class="status-box">
+                          <span>Not indexed</span>
+                        </div>
+                      </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <a href="#" class="modal-close btn filter-modal-footer-btn-cancel">Clear filter</a>
+                        <a class="btn filter-modal-footer-btn">Apply filter</a>
+
+                    </div>
+                </div>
+                <!-- Delete confirmation modal -->
+                <div id="delete-confirmation-modal" class="modal">
+                    <div class="termination-confirmation-modal">
+                        <div class="termination-confirmation-modal-container">
+                            <div class="termination-icon">
+                                <svg width="83" height="82" viewBox="0 0 83 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M41.3395 6.83336C22.5888 6.83336 7.33337 22.1605 7.33337 41C7.33337 59.8395 22.6605 75.1667 41.5 75.1667C60.3395 75.1667 75.6667 59.8395 75.6667 41C75.6667 22.1605 60.2678 6.83336 41.3395 6.83336ZM44.9167 58.0834H38.0834V51.25H44.9167V58.0834ZM44.9167 44.4167H38.0834V23.9167H44.9167V44.4167Z" fill="#DB2A2A"/>
+                </svg>
+                            </div>
+                            <div class="termination-confirmation-text">
+                                Are you sure you want to delete this document ?
+                            </div>
+                            <div class="termination-buttons">
+                                <button class="btn termination-no-btn modal-close">Cancel</button>
+                                <button class="btn termination-yes-btn modal-close">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Container-->
+
+                <!-- <div id="console-modal-container" style="display: none;">
+    <div id="modal-mis-filter" class="modal">
+        <div class="modal-content">
+            <h6 style="color: #3e95cd">Filter parameter</h6>
+            <div class="input-field col s12">
+                <select id="filter">
+                    <option value="0" selected="selected">None</option>
+                    <option value="1">Unanswered Messages</option>
+                </select>
+            </div>
+            <h6 style="color: #3e95cd">From Date</h6>
+            <input placeholder="yyyy-mm-dd" type = "text" class="datepicker" id="startdate"/> 
+            <h6 style="color: #3e95cd">To Date</h6>
+            <input placeholder="yyyy-mm-dd" type = "text" class="datepicker" id="enddate"/> 
+        </div>
+        <div class="modal-footer">
+          <button id="export-mis-filter" class="modal-action modal-close waves-effect waves-green btn-flat">Export</button>
+        </div>
+    </div>
+    <div id="modal-mis-keyword" class="modal">
+        <div class="modal-content">
+            <h6 style="color: #3e95cd">Keywords for filter</h6>
+            <div class="input-field col s12">
+                <input placeholder="Write Keywords with comma(,) separation" id="keyword_str" type="text" class="validate">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="export-mis-keyword" class="modal-action modal-close waves-effect waves-green btn-flat">Export</button>
+        </div>
+    </div>
+</div> -->
+
+
+                <script>
+                    $(document).ready(function() {
+                        $('.collapsible').collapsible();
+                    });
+
+
+
+                    elements = document.getElementById("buildchatbot-sidenav");
+
+                    elements = document.getElementById("buildchatbot-sidenav");
+                    for (var index = 0; index < elements.childNodes.length; index++) {
+                        if (elements.childNodes[index].href != undefined) {
+                            elements.childNodes[index].classList.remove("active");
+                        }
+                    }
+
+                    for (var index = 0; index < elements.childNodes.length; index++) {
+                        if (elements.childNodes[index].href != undefined && elements.childNodes[index].href.indexOf(window.location.pathname) != -1) {
+                            elements.childNodes[index].classList.add("active");
+                            break;
+                        }
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+        <div data-html2canvas-ignore class="easychat-footer">
+
+            <span class="left">Version: 4.6</span>
+            <span class="left">Date of Release: 28-Sep-2021</span>
+            <!-- <a href="https://docs.google.com/spreadsheets/d/1wcKi4E38DW99npqyCVwSWOUEEvJqpJLeGDcT-UrMRUc/edit?usp=sharing" target="_blank"> <i class="material-icons tiny" id="home-button">feedback</i></a> -->
+
+            <span> © 2017 - 2021, Cogno AI or its affiliates. All rights reserved.</span>
+        </div>
+
+        <!-- Build bot modal -->
+
+        <div id="easychat-build-bot-modal" class="modal modal-fixed-footer">
+            <div class="modal-header">
+                <h5>Build Bot</h5>
+            </div>
+
+            <div class="modal-content">
+                <ol id="build-bot-points" style="margin: 0px; padding: 0;">
+                    <li class="build-bot-processes">
+                        <div class="build-bot-process">1. Updating Version Of Files</div>
+                        <div class="build-bot-process-loader" id="build-bot-process-loader-one"></div>
+                    </li>
+                    <li class="build-bot-processes">
+                        <div class="build-bot-process">2. Syncing Word Mappers With Intents</div>
+                        <div class="build-bot-process-loader" id="build-bot-process-loader-two"></div>
+                    </li>
+                    <li class="build-bot-processes">
+                        <div class="build-bot-process">3. Training Spell Checker And Word Splitter</div>
+                        <div class="build-bot-process-loader" id="build-bot-process-loader-three"></div>
+                    </li>
+                    <li class="build-bot-processes">
+                        <div class="build-bot-process">4. Loading Suggestions And Word Mappers</div>
+                        <div class="build-bot-process-loader" id="build-bot-process-loader-four"></div>
+                    </li>
+                </ol>
+                <div style="font-size: 25px; color: #4d4d4d; display: none;" id="bot-built-success">
+                    <p>Bot Built Successfully!</p>
+                </div>
+                <div style="font-size: 25px; color: #4d4d4d; display: none;" id="bot-built-failed">
+                    <p>Bot Built Failed!</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="build-bot-modal-close-btn" href="javascript:void(0)" class=" modal-close btn transparent-btn white black-text" style="pointer-events: none; opacity: 0.7;">Close</a>
+            </div>
+        </div>
+
+        <!-- Lnaguage change loader modal -->
+        <div id="modal-language-change-loader" class="modal">
+            <div class="modal-content">
+                <img id="language-change-loader-gif" style="width: 220px;height: 135px;" src="https://easychat-dev.allincall.in/static/EasyChatApp/img/language_change_loader.gif">
+                <div id="language-loader-inner-text" style="color: #2755CB;font-weight:500;"> Loading Languages</div>
+            </div>
+        </div>
+
+        <!-- Build bot modal -->
+
+
+
+        <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/easychat-crypto.js?v=78.92"></script>
+        <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/canvasjs.min.js"></script>
+        <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/analytics.js?v=34.82"></script>
+        <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/console_custom_dropdown.js?v=3.54"></script>
+        <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/utils.js?v=8.41"></script>
+        <script type="text/javascript" src="https://easychat-dev.allincall.in/static/EasyChatApp/js/console.js?v=36.45"></script>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="./script.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript">
+            $("#home-button").click(function() {
+                if ($("#panel").is(":visible") == true) {
+                    $("#panel").hide(100);
+                } else {
+                    $("#panel").show(100);
+                }
+            });
+
+            $(document).on('contextmenu', '.collapsible_custom', function(e) {
+                e.preventDefault();
+                var d = document.getElementById('menu-div');
+                d.style.position = "absolute";
+                d.style.left = e.pageX - 200 + 'px';
+                d.style.top = e.pageY + 'px';
+                pk_list = this.id.split("_");
+                global_select_tree_name = $(this).text().trim()
+                global_select_intent_id = pk_list[0];
+                global_select_parent_id = pk_list[1];
+                global_select_tree_id = pk_list[2];
+                var tree_name = document.getElementById(this.id + "_tree_name_container").getAttribute("value");
+                document.getElementById("modal_tree_name").value = tree_name;
+                $("#menu-div").show();
+                return false;
+            });
+
+            $(document).ready(function() {
+                $('.modal').modal();
+                $('.modal').on('shown.bs.modal', function(e) {
+                    $('#modal-general-feedback').find('input:text, input:file, input:password, select, textarea').val('');
+                    $(this).removeData();
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var t = $('#pdf_search_table').DataTable({
+                    paging: false,
+                    searching: false,
+
+                    info: false,
+
+                    'order': [],
+                    'columnDefs': [{
+                        "orderable": false
+                    }]
+
+                });
+
+            });
+
+
+            $(document).ready(function() {
+                $('.pdf-delete-icon').click(function() {
+                    console.log("Hello");
+                    $('#delete-confirmation-modal').modal('open');
+                });
+            });
+        </script>
+
+        <script>
+            function show_custom_date() {
+                if (document.getElementById('date_range_4').checked) {
+                    document.getElementById("analytics-custom-date-select-area").style.display = "block";
+                } else {
+                    document.getElementById("analytics-custom-date-select-area").style.display = "none";
+
+                }
+            }
+        </script>
+
+
+        <!-- Datepicker-timepicker scripts -->
+
+
+
+</body>
+
+</html>
